@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppStoreConnect-Swift-SDK",
+    name: "AppStoreConnect",
     platforms: [
         .iOS(.v11),
         .macOS(.v10_12)
     ],
     products: [
         // dev .library(name: "DangerDeps", type: .dynamic, targets: ["DangerDependencies"]),
-        .library(name: "AppStoreConnect-Swift-SDK", targets: ["AppStoreConnect-Swift-SDK"])
+        .library(name: "AppStoreConnect", targets: ["AppStoreConnect"])
     ],
     dependencies: [
         // dev .package(url: "https://github.com/danger/swift", from: "3.0.0"),
@@ -20,6 +20,6 @@ let package = Package(
     targets: [
         // dev .target(name: "DangerDependencies", dependencies: ["Danger", "WeTransferPRLinter"], path: "Submodules/WeTransfer-iOS-CI/Danger-Swift", sources: ["DangerFakeSource.swift"]),
         // dev .testTarget(name: "AppStoreConnect-Swift-SDK-Tests", dependencies: ["AppStoreConnect-Swift-SDK"], path: "Tests", exclude: ["LinuxMain.swift"]),
-        .target(name: "AppStoreConnect-Swift-SDK", path: "Sources")
+        .target(name: "AppStoreConnect", path: "Sources")
     ]
 )

@@ -7,6 +7,7 @@
 
 import Foundation
 import Crypto
+import Security
 
 public typealias ECPrivateKey = SecKey
 
@@ -21,11 +22,6 @@ extension ECPrivateKey {
         let digestData = Data(digest)
 
         let algorithm = SecKeyAlgorithm.ecdsaSignatureDigestX962SHA256
-
-        guard SecKeyIsAlgorithmSupported(self, .sign, algorithm)
-            else {
-                throw JWT.Error.ES256SigningFailed
-        }
 
         var error: Unmanaged<CFError>?
 

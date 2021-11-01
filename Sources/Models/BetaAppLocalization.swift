@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// The data structure that represents the resource.
 public struct BetaAppLocalization: Codable {

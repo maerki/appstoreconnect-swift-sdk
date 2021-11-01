@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum AppStoreAgeRating: String, Codable {
     case fourPlus = "FOUR_PLUS"

@@ -5,6 +5,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum AppStoreVersionLocalizationRelationship: Codable {
     case appStoreVersion(AppStoreVersion)

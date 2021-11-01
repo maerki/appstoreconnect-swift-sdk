@@ -1,5 +1,8 @@
 @testable import AppStoreConnect_Swift_SDK
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 import XCTest
 
 final class CreateAppStoreVersionTests: XCTestCase {

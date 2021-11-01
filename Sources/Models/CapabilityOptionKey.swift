@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 /// Strings that represent a capability option key.
 public enum CapabilityOptionKey: String, Codable {

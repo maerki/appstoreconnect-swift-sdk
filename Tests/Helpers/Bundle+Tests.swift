@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 extension Bundle {
     static let tests = Bundle(for: BundleTag.self)

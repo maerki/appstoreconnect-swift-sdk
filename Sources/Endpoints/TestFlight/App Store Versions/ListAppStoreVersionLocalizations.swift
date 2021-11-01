@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 extension APIEndpoint where T == AppStoreVersionLocalizationsResponse {
     /// Get a list of localized, version-level information about an app, for all locales.

@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public struct AppMediaAssetState: Codable {
     public let errors: [AppMediaStateError]?

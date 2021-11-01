@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// A response containing the ID of the related resource.
 public struct BuildAppLinkageResponse: Codable {

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// A request containing the IDs of related resources.
 public struct BuildBetaGroupsLinkagesRequest: Codable {

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum KidsAgeBand: String, Codable {
     case fiveAndUnder = "FIVE_AND_UNDER"

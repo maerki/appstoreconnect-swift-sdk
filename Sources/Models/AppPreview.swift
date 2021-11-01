@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public struct AppPreview: Codable {
     public struct Attributes: Codable {

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// A request containing a single resource.
 public struct BetaAppLocalizationCreateRequest: Codable {

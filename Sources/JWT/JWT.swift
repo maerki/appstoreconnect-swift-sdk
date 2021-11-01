@@ -8,6 +8,9 @@
 
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 import JWTKit
 
 /// The JWT Header contains information specific to the App Store Connect API Keys, such as algorithm and keys.

@@ -8,6 +8,9 @@
 @testable import AppStoreConnect_Swift_SDK
 import XCTest
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 final class ProfilesResponseTests: XCTestCase {
 

@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public extension APIEndpoint where T == AppStoreVersionLocalization {
     static func appStoreVersionLocalization(

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// A request containing the ID of the related resource.
 public struct BuildAppEncryptionDeclarationLinkageRequest: Codable {

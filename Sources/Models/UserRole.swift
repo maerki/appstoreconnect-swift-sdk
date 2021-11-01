@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     /// Strings representing user roles in App Store Connect.
 public enum UserRole: String, CaseIterable, Codable {
     case admin = "ADMIN"

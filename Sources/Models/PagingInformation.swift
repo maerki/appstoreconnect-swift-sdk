@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// Paging information for data responses.
 public struct PagingInformation: Codable {

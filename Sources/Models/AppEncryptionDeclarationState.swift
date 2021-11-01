@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     /// Strings representing the review or acceptance status of an app encryption declaration submitted to Apple.
 public enum AppEncryptionDeclarationState: String, Codable {
     case approved = "APPROVED"

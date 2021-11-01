@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
     
 /// A response containing a list of related resource IDs.
 public struct UserVisibleAppsLinkagesResponse: Codable {

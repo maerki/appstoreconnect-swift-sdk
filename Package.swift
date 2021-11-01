@@ -15,11 +15,12 @@ let package = Package(
     ],
     dependencies: [
         // dev .package(url: "https://github.com/danger/swift", from: "3.0.0"),
-        .package(url: "https://github.com/apple/swift-crypto.git", "1.0.0" ..< "3.0.0"),
+        .package(url: "https://github.com/vapor/jwt-kit.git", from: "4.0.0")
+
         ],
     targets: [
         // dev .target(name: "DangerDependencies", dependencies: ["Danger", "WeTransferPRLinter"], path: "Submodules/WeTransfer-iOS-CI/Danger-Swift", sources: ["DangerFakeSource.swift"]),
         // dev .testTarget(name: "AppStoreConnect-Swift-SDK-Tests", dependencies: ["AppStoreConnect-Swift-SDK"], path: "Tests", exclude: ["LinuxMain.swift"]),
-        .target(name: "AppStoreConnectSDK", dependencies: ["Crypto"], path: "Sources")
+        .target(name: "AppStoreConnectSDK", dependencies: ["JWTKit"], path: "Sources")
     ]
 )

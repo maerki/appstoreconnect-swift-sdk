@@ -36,7 +36,7 @@ final class JWTCreator {
     }
 
     func signedToken(using privateKey: String) throws -> JWTToken {
-        let k = try! ECDSAKey.private(pem: privateKey)
+        let k = try ECDSAKey.private(pem: privateKey)
         signers.use(.es256(key: k), kid: JWKIdentifier(string: keyIdentifier))
 
         let jwt = JWT(keyIdentifier: keyIdentifier, issuerIdentifier: issuerIdentifier, expireDuration: expireDuration)

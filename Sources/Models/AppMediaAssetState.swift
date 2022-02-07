@@ -4,7 +4,7 @@ import FoundationNetworking
 #endif
 
 public struct AppMediaAssetState: Codable {
-    public let errors: [AppMediaStateError]?
-    public let state: String?
-    public let warnings: [AppMediaStateError]?
+    public varerrors: [AppMediaStateError]?
+    public varstate: String?
+    public varwarnings: [AppMediaStateError]?
 }

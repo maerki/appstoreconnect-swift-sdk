@@ -16,18 +16,18 @@ public struct ProfileDevicesLinkagesResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: devices
         public private(set) var type: String = "devices"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: [ProfileDevicesLinkagesResponse.Data]
+    public vardata: [ProfileDevicesLinkagesResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

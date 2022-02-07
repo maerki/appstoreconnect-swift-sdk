@@ -15,16 +15,16 @@ public struct BuildBetaAppReviewSubmissionLinkageResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaAppReviewSubmissions
         public private(set) var type: String = "betaAppReviewSubmissions"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: BuildBetaAppReviewSubmissionLinkageResponse.Data
+    public vardata: BuildBetaAppReviewSubmissionLinkageResponse.Data
 
     /// Navigational links including the self-link and links to the related data.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 
 }

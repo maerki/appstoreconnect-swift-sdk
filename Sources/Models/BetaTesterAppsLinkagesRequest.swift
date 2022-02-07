@@ -15,14 +15,14 @@ public struct BetaTesterAppsLinkagesRequest: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
     }
 
     /// The types and IDs of related resources.
-    public let data: [BetaTesterAppsLinkagesRequest.Data]
+    public vardata: [BetaTesterAppsLinkagesRequest.Data]
 
     /// - Parameters:
     ///   - appIds: Array of opaque resource ID that uniquely identifies the resources.

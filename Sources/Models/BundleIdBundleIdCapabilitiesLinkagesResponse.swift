@@ -16,18 +16,18 @@ public struct BundleIdBundleIdCapabilitiesLinkagesResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: bundleIdCapabilities
         public private(set) var type: String = "bundleIdCapabilities"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: [BundleIdBundleIdCapabilitiesLinkagesResponse.Data]
+    public vardata: [BundleIdBundleIdCapabilitiesLinkagesResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

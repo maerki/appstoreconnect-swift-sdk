@@ -13,15 +13,15 @@ import FoundationNetworking
 public struct PreReleaseVersionsResponse: Codable {
 
     /// The resource data.
-    public let data: [PrereleaseVersion]
+    public vardata: [PrereleaseVersion]
 
     /// The requested relationship data.￼
     ///  Possible types: Build, App
-    public let included: [PreReleaseVersionRelationship]?
+    public varincluded: [PreReleaseVersionRelationship]?
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

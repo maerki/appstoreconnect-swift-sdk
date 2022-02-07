@@ -12,15 +12,15 @@ import FoundationNetworking
 
 public struct AppInfoResponse: Codable {
     /// The resource data.
-    public let data: AppInfo
+    public vardata: AppInfo
 
     /// The requested relationship data.￼
     ///  Possible types: AppInfoLocalization, AppCategory
-    public let included: [AppInfoRelationship]?
+    public varincluded: [AppInfoRelationship]?
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

@@ -14,12 +14,12 @@ import FoundationNetworking
 public struct AppResponse: Codable {
 
     /// The resource data.
-    public let data: App
+    public vardata: App
 
     /// The requested relationship data.￼
     /// Possible types: BetaGroup, PrereleaseVersion, BetaAppLocalization, Build, BetaLicenseAgreement, BetaAppReviewDetail
-    public let included: [AppRelationship]?
+    public varincluded: [AppRelationship]?
 
     /// Navigational links that include the self-link.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 }

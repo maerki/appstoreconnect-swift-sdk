@@ -15,14 +15,14 @@ public struct BuildBetaNotificationCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The types and IDs of the related data to update.
-        public let relationships: BuildBetaNotificationCreateRequest.Data.Relationships
+        public varrelationships: BuildBetaNotificationCreateRequest.Data.Relationships
 
         /// The resource type.Value: buildBetaNotifications
         public private(set) var type: String = "buildBetaNotifications"
     }
 
     /// The resource data.
-    public let data: BuildBetaNotificationCreateRequest.Data
+    public vardata: BuildBetaNotificationCreateRequest.Data
 
     /// - Parameters:
     ///   - buildId: The opaque resource ID that uniquely identifies the resource.
@@ -38,7 +38,7 @@ extension BuildBetaNotificationCreateRequest.Data {
     public struct Relationships: Codable {
 
         /// BuildBetaNotificationCreateRequest.Data.Relationships.Build (Required)
-        public let build: BuildBetaNotificationCreateRequest.Data.Relationships.Build
+        public varbuild: BuildBetaNotificationCreateRequest.Data.Relationships.Build
     }
 }
 
@@ -48,7 +48,7 @@ extension BuildBetaNotificationCreateRequest.Data.Relationships {
     public struct Build: Codable {
 
         /// BuildBetaNotificationCreateRequest.Data.Relationships.Build.Data (Required)
-        public let data: BuildBetaNotificationCreateRequest.Data.Relationships.Build.Data
+        public vardata: BuildBetaNotificationCreateRequest.Data.Relationships.Build.Data
     }
 }
 
@@ -58,7 +58,7 @@ extension BuildBetaNotificationCreateRequest.Data.Relationships.Build {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The types and IDs of the related data to update.Value: builds
         public private(set) var type: String = "builds"

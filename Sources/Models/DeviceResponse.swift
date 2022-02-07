@@ -14,8 +14,8 @@ import FoundationNetworking
 public struct DeviceResponse: Codable {
 
     /// The resource data.
-    public let data: Device
+    public vardata: Device
 
     /// Navigational links that include the self-link.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 }

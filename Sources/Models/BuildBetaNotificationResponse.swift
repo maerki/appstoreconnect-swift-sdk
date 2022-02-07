@@ -13,8 +13,8 @@ import FoundationNetworking
 public struct BuildBetaNotificationResponse: Codable {
 
     /// The resource data.
-    public let data: BuildBetaNotification
+    public vardata: BuildBetaNotification
 
     /// Navigational links that include the self-link.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 }

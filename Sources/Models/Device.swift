@@ -15,24 +15,24 @@ public struct Device: Codable {
 
     /// Attributes that describe a certificate.
     public struct Attributes: Codable {
-        public let deviceClass: DeviceClass?
-        public let model: String?
-        public let name: String?
-        public let platform: BundleIdPlatform?
-        public let status: DeviceStatus?
-        public let udid: String?
-        public let addedDate: Date?
+        public vardeviceClass: DeviceClass?
+        public varmodel: String?
+        public varname: String?
+        public varplatform: BundleIdPlatform?
+        public varstatus: DeviceStatus?
+        public varudid: String?
+        public varaddedDate: Date?
     }
 
     /// The resource's attributes.
-    public let attributes: Device.Attributes
+    public varattributes: Device.Attributes
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let id: String
+    public varid: String
 
     /// The resource type.
     public private(set) var type: String = "devices"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<Device>
+    public varlinks: ResourceLinks<Device>
 }

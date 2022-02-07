@@ -5,8 +5,8 @@ import FoundationNetworking
 
 public struct AppStoreVersionSubmissionResponse: Codable {
 
-    public let data: AppStoreVersionSubmission
+    public vardata: AppStoreVersionSubmission
 
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 
 }

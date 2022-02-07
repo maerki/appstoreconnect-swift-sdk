@@ -15,17 +15,17 @@ public struct BetaBuildLocalizationCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaBuildLocalizationCreateRequest.Data.Attributes
+        public varattributes: BetaBuildLocalizationCreateRequest.Data.Attributes
 
         /// Navigational links to related data and included resource types and IDs.
-        public let relationships: BetaBuildLocalizationCreateRequest.Data.Relationships
+        public varrelationships: BetaBuildLocalizationCreateRequest.Data.Relationships
 
         /// The resource type.Value: betaBuildLocalizations
         public private(set) var type: String = "betaBuildLocalizations"
     }
 
     /// The resource data.
-    public let data: BetaBuildLocalizationCreateRequest.Data
+    public vardata: BetaBuildLocalizationCreateRequest.Data
 
     /// - Parameters:
     ///   - buildId: The opaque resource ID that uniquely identifies the resource.
@@ -46,16 +46,16 @@ extension BetaBuildLocalizationCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The specified locale. Refer to Table 1 for possible values.
-        public let locale: String
+        public varlocale: String
 
         /// A field that describes changes and additions to a build and indicates features you would like your users to test.
-        public let whatsNew: String?
+        public varwhatsNew: String?
     }
 
     public struct Relationships: Codable {
 
         /// BetaBuildLocalizationCreateRequest.Data.Relationships.Build (Required)
-        public let build: BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+        public varbuild: BetaBuildLocalizationCreateRequest.Data.Relationships.Build
     }
 }
 
@@ -65,7 +65,7 @@ extension BetaBuildLocalizationCreateRequest.Data.Relationships {
     public struct Build: Codable {
 
         /// BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data (Required)
-        public let data: BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
+        public vardata: BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
     }
 }
 
@@ -75,7 +75,7 @@ extension BetaBuildLocalizationCreateRequest.Data.Relationships.Build {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"

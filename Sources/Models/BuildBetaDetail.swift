@@ -16,35 +16,35 @@ public struct BuildBetaDetail: Codable {
     public struct Attributes: Codable {
 
         /// A Boolean value that enables you to send test invitations to users automatically when the build is available to external groups.
-        public let autoNotifyEnabled: Bool?
+        public varautoNotifyEnabled: Bool?
 
         /// A state that indicates if the build is available for external testing.
-        public let externalBuildState: ExternalBetaState?
+        public varexternalBuildState: ExternalBetaState?
 
         /// A state that indicates if the build is available for internal testing.
-        public let internalBuildState: InternalBetaState?
+        public varinternalBuildState: InternalBetaState?
     }
 
     public struct Relationships: Codable {
 
         /// BuildBetaDetail.Relationships.Build
-        public let build: BuildBetaDetail.Relationships.Build?
+        public varbuild: BuildBetaDetail.Relationships.Build?
     }
 
     /// The resource's attributes.
-    public let attributes: BuildBetaDetail.Attributes?
+    public varattributes: BuildBetaDetail.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: BuildBetaDetail.Relationships?
+    public varrelationships: BuildBetaDetail.Relationships?
 
     /// The resource type.Value: buildBetaDetails
     public private(set) var type: String = "buildBetaDetails"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BuildBetaDetailResponse>
+    public varlinks: ResourceLinks<BuildBetaDetailResponse>
 
 }
 
@@ -54,10 +54,10 @@ extension BuildBetaDetail.Relationships {
     public struct Build: Codable {
 
         /// BuildBetaDetail.Relationships.Build.Data
-        public let data: BuildBetaDetail.Relationships.Build.Data?
+        public vardata: BuildBetaDetail.Relationships.Build.Data?
 
         /// BuildBetaDetail.Relationships.Build.Links
-        public let links: BuildBetaDetail.Relationships.Build.Links?
+        public varlinks: BuildBetaDetail.Relationships.Build.Links?
     }
 }
 
@@ -67,7 +67,7 @@ extension BuildBetaDetail.Relationships.Build {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
@@ -76,9 +76,9 @@ extension BuildBetaDetail.Relationships.Build {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

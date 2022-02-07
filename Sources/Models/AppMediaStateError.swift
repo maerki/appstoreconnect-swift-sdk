@@ -4,6 +4,6 @@ import FoundationNetworking
 #endif
 
 public struct AppMediaStateError: Codable {
-    public let code: String?
-    public let description: String?
+    public varcode: String?
+    public vardescription: String?
 }

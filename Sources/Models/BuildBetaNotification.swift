@@ -13,10 +13,10 @@ import FoundationNetworking
 public struct BuildBetaNotification: Codable {
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BuildBetaNotificationResponse>
+    public varlinks: ResourceLinks<BuildBetaNotificationResponse>
 
     /// The resource type.Value: buildBetaNotifications
     public private(set) var type: String = "buildBetaNotifications"

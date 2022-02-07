@@ -14,11 +14,11 @@ import FoundationNetworking
 public struct DevicesResponse: Codable {
 
     /// The paging information details.
-    public let data: [Device]
+    public vardata: [Device]
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

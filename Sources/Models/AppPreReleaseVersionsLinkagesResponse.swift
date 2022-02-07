@@ -16,19 +16,19 @@ public struct AppPreReleaseVersionsLinkagesResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: preReleaseVersions
         public private(set) var type: String = "preReleaseVersions"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: [AppPreReleaseVersionsLinkagesResponse.Data]
+    public vardata: [AppPreReleaseVersionsLinkagesResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 
 }

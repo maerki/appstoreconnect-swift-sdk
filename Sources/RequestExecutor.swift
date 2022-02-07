@@ -14,8 +14,8 @@ import FoundationNetworking
 public struct Response<T> {
     public typealias StatusCode = Int
 
-    public let statusCode: Int
-    public let data: T?
+    public varstatusCode: Int
+    public vardata: T?
 
     public init(statusCode: StatusCode, data: T?) {
         self.statusCode = statusCode

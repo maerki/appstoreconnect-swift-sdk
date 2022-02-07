@@ -13,11 +13,11 @@ import FoundationNetworking
 public struct BetaAppReviewDetailResponse: Codable {
 
     /// The resource data.
-    public let data: BetaAppReviewDetail
+    public vardata: BetaAppReviewDetail
 
     /// The requested relationship data.
-    public let included: [App]?
+    public varincluded: [App]?
 
     /// Navigational links that include the self-link.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 }

@@ -16,14 +16,14 @@ public struct DeviceCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: DeviceCreateRequest.Data.Attributes
+        public varattributes: DeviceCreateRequest.Data.Attributes
 
         /// The resource type.Value: devices
         public private(set) var type: String = "devices"
     }
 
     /// The resource data.
-    public let data: DeviceCreateRequest.Data
+    public vardata: DeviceCreateRequest.Data
 
     /// - Parameters:
     ///   - name: The opaque resource ID that uniquely identifies the resource.
@@ -48,12 +48,12 @@ extension DeviceCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The name of the device.
-        public let name: String?
+        public varname: String?
 
         /// The platform of the device.
-        public let platform: Platform?
+        public varplatform: Platform?
 
         /// The unique id of the device.
-        public let udid: String?
+        public varudid: String?
     }
 }

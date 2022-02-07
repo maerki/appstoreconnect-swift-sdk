@@ -14,27 +14,27 @@ public struct BuildBundleFileSize: Codable {
     public struct Attributes: Codable {
 
         /// A string that identifies the Apple device model.
-        public let deviceModel: String?
+        public vardeviceModel: String?
 
         /// An integer value that represents the download size of the build bundle in bytes.
-        public let downloadBytes: Int?
+        public vardownloadBytes: Int?
 
         /// An integer value that represents the installation size of the build bundle in bytes.
-        public let installBytes: Int?
+        public varinstallBytes: Int?
 
         /// A string that identifies the OS version supported by the app or App Clip.
-        public let osVersion: String?
+        public varosVersion: String?
     }
 
     /// The opaque resource ID that uniquely identifies a Build
-    public let id: String
+    public varid: String
 
     /// The attributes that describe the Build Bundle File Sizes resource.
-    public let attributes: BuildBundleFileSize.Attributes?
+    public varattributes: BuildBundleFileSize.Attributes?
 
     /// The resource type. Value buildBundleFileSizes
-    public let type: String = "buildBundleFileSizes"
+    public vartype: String = "buildBundleFileSizes"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BuildBundleFileSizesResponse>
+    public varlinks: ResourceLinks<BuildBundleFileSizesResponse>
 }

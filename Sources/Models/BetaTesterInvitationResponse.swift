@@ -13,8 +13,8 @@ import FoundationNetworking
 public struct BetaTesterInvitationResponse: Codable {
 
     /// The resource data.
-    public let data: BetaTesterInvitation
+    public vardata: BetaTesterInvitation
 
     /// Navigational links that include the self-link.
-    public let links: DocumentLinks
+    public varlinks: DocumentLinks
 }

@@ -14,40 +14,40 @@ import FoundationNetworking
 public struct AppStoreVersion: Codable {
     /// Attributes that describe a resource.
     public struct Attributes: Codable {
-        public let platform: Platform?
-        public let appStoreState: AppStoreVersionState?
-        public let copyright: String?
-        public let earliestReleaseDate: Date?
-        public let releaseType: String?
-        public let usesIdfa: Bool?
-        public let versionString: String?
-        public let createdDate: Date?
-        public let downloadable: Bool?
+        public varplatform: Platform?
+        public varappStoreState: AppStoreVersionState?
+        public varcopyright: String?
+        public varearliestReleaseDate: Date?
+        public varreleaseType: String?
+        public varusesIdfa: Bool?
+        public varversionString: String?
+        public varcreatedDate: Date?
+        public vardownloadable: Bool?
     }
 
     public struct Relationships: Codable {
-        public let app: AppStoreVersion.Relationships.App?
-        public let ageRatingDeclaration: AppStoreVersion.Relationships.AgeRatingDeclaration?
-        public let appStoreReviewDetail: AppStoreVersion.Relationships.AppStoreReviewDetail?
-        public let appStoreVersionLocalizations: AppStoreVersion.Relationships.AppStoreVersionLocalizations?
-        public let appStoreVersionPhasedRelease: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease?
-        public let appStoreVersionSubmission: AppStoreVersion.Relationships.AppStoreVersionSubmission?
-        public let build: AppStoreVersion.Relationships.Build?
-        public let idfaDeclaration: AppStoreVersion.Relationships.IdfaDeclaration?
-        public let routingAppCoverage: AppStoreVersion.Relationships.RoutingAppCoverage?
+        public varapp: AppStoreVersion.Relationships.App?
+        public varageRatingDeclaration: AppStoreVersion.Relationships.AgeRatingDeclaration?
+        public varappStoreReviewDetail: AppStoreVersion.Relationships.AppStoreReviewDetail?
+        public varappStoreVersionLocalizations: AppStoreVersion.Relationships.AppStoreVersionLocalizations?
+        public varappStoreVersionPhasedRelease: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease?
+        public varappStoreVersionSubmission: AppStoreVersion.Relationships.AppStoreVersionSubmission?
+        public varbuild: AppStoreVersion.Relationships.Build?
+        public varidfaDeclaration: AppStoreVersion.Relationships.IdfaDeclaration?
+        public varroutingAppCoverage: AppStoreVersion.Relationships.RoutingAppCoverage?
     }
 
     /// The resource's attributes.
-    public let attributes: AppStoreVersion.Attributes?
+    public varattributes: AppStoreVersion.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let id: String
+    public varid: String
 
     // Navigational links that include the self-link.
-    public let links: ResourceLinks<AppStoreVersionResponse>
+    public varlinks: ResourceLinks<AppStoreVersionResponse>
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: AppStoreVersion.Relationships?
+    public varrelationships: AppStoreVersion.Relationships?
 
     /// The resource type.Value: appStoreVersions
     public private(set) var type: String = "appStoreVersions"
@@ -57,137 +57,137 @@ public struct AppStoreVersion: Codable {
 // MARK: AppStoreVersion.Relationships
 extension AppStoreVersion.Relationships {
     public struct App: Codable {
-        public let data: AppStoreVersion.Relationships.App.Data?
-        public let links: AppStoreVersion.Relationships.App.Links?
+        public vardata: AppStoreVersion.Relationships.App.Data?
+        public varlinks: AppStoreVersion.Relationships.App.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "apps"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct AgeRatingDeclaration: Codable {
-        public let data: AppStoreVersion.Relationships.AgeRatingDeclaration.Data?
-        public let links: AppStoreVersion.Relationships.AgeRatingDeclaration.Links
+        public vardata: AppStoreVersion.Relationships.AgeRatingDeclaration.Data?
+        public varlinks: AppStoreVersion.Relationships.AgeRatingDeclaration.Links
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "ageRatingDeclarations"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct AppStoreReviewDetail: Codable {
-        public let data: AppStoreVersion.Relationships.AppStoreReviewDetail.Data?
-        public let links: AppStoreVersion.Relationships.AppStoreReviewDetail.Links?
+        public vardata: AppStoreVersion.Relationships.AppStoreReviewDetail.Data?
+        public varlinks: AppStoreVersion.Relationships.AppStoreReviewDetail.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appStoreReviewDetails"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct AppStoreVersionLocalizations: Codable {
-        public let data: AppStoreVersion.Relationships.AppStoreVersionLocalizations.Data?
-        public let links: AppStoreVersion.Relationships.AppStoreVersionLocalizations.Links?
+        public vardata: AppStoreVersion.Relationships.AppStoreVersionLocalizations.Data?
+        public varlinks: AppStoreVersion.Relationships.AppStoreVersionLocalizations.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appStoreVersionLocalizations"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct AppStoreVersionPhasedRelease: Codable {
-        public let data: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease.Data?
-        public let links: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease.Links?
+        public vardata: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease.Data?
+        public varlinks: AppStoreVersion.Relationships.AppStoreVersionPhasedRelease.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appStoreVersionPhasedReleases"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct AppStoreVersionSubmission: Codable {
-        public let data: AppStoreVersion.Relationships.AppStoreVersionSubmission.Data?
-        public let links: AppStoreVersion.Relationships.AppStoreVersionSubmission.Links?
+        public vardata: AppStoreVersion.Relationships.AppStoreVersionSubmission.Data?
+        public varlinks: AppStoreVersion.Relationships.AppStoreVersionSubmission.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appStoreVersionSubmissions"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct Build: Codable {
-        public let data: AppStoreVersion.Relationships.Build.Data?
-        public let links: AppStoreVersion.Relationships.Build.Links?
+        public vardata: AppStoreVersion.Relationships.Build.Data?
+        public varlinks: AppStoreVersion.Relationships.Build.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "builds"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct IdfaDeclaration: Codable {
-        public let data: AppStoreVersion.Relationships.IdfaDeclaration.Data?
-        public let links: AppStoreVersion.Relationships.IdfaDeclaration.Links?
+        public vardata: AppStoreVersion.Relationships.IdfaDeclaration.Data?
+        public varlinks: AppStoreVersion.Relationships.IdfaDeclaration.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "idfaDeclarations"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 
     public struct RoutingAppCoverage: Codable {
-        public let data: AppStoreVersion.Relationships.RoutingAppCoverage.Data?
-        public let links: AppStoreVersion.Relationships.RoutingAppCoverage.Links?
+        public vardata: AppStoreVersion.Relationships.RoutingAppCoverage.Data?
+        public varlinks: AppStoreVersion.Relationships.RoutingAppCoverage.Links?
 
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "routingAppCoverages"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
     }
 }

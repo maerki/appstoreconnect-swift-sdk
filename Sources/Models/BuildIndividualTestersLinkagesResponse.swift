@@ -15,18 +15,18 @@ public struct BuildIndividualTestersLinkagesResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "betaTesters"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: [BuildIndividualTestersLinkagesResponse.Data]
+    public vardata: [BuildIndividualTestersLinkagesResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

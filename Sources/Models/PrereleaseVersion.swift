@@ -16,32 +16,32 @@ public struct PrereleaseVersion: Codable {
     public struct Attributes: Codable {
 
         /// The platform of the prerelease version of your app.
-        public let platform: Platform?
+        public varplatform: Platform?
 
         /// The version number of the prerelease version of your app.
-        public let version: String?
+        public varversion: String?
     }
 
     public struct Relationships: Codable {
 
         /// PrereleaseVersion.Relationships.App
-        public let app: PrereleaseVersion.Relationships.App?
+        public varapp: PrereleaseVersion.Relationships.App?
 
         /// PrereleaseVersion.Relationships.Builds
-        public let builds: PrereleaseVersion.Relationships.Builds?
+        public varbuilds: PrereleaseVersion.Relationships.Builds?
     }
 
     /// The resource's attributes.
-    public let attributes: PrereleaseVersion.Attributes?
+    public varattributes: PrereleaseVersion.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<PrereleaseVersionResponse>
+    public varlinks: ResourceLinks<PrereleaseVersionResponse>
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: PrereleaseVersion.Relationships?
+    public varrelationships: PrereleaseVersion.Relationships?
 
     /// The resource type.Value: preReleaseVersions
     public private(set) var type: String = "preReleaseVersions"
@@ -53,22 +53,22 @@ extension PrereleaseVersion.Relationships {
     public struct App: Codable {
 
         /// PrereleaseVersion.Relationships.App.Data
-        public let data: PrereleaseVersion.Relationships.App.Data?
+        public vardata: PrereleaseVersion.Relationships.App.Data?
 
         /// PrereleaseVersion.Relationships.App.Links
-        public let links: PrereleaseVersion.Relationships.App.Links?
+        public varlinks: PrereleaseVersion.Relationships.App.Links?
     }
 
     public struct Builds: Codable {
 
         /// [PrereleaseVersion.Relationships.Builds.Data]
-        public let data: [PrereleaseVersion.Relationships.Builds.Data]?
+        public vardata: [PrereleaseVersion.Relationships.Builds.Data]?
 
         /// PrereleaseVersion.Relationships.Builds.Links
-        public let links: PrereleaseVersion.Relationships.Builds.Links?
+        public varlinks: PrereleaseVersion.Relationships.Builds.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 }
 
@@ -78,7 +78,7 @@ extension PrereleaseVersion.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -87,10 +87,10 @@ extension PrereleaseVersion.Relationships.App {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }
 
@@ -100,7 +100,7 @@ extension PrereleaseVersion.Relationships.Builds {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
@@ -109,9 +109,9 @@ extension PrereleaseVersion.Relationships.Builds {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

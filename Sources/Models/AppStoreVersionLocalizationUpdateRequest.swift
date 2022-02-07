@@ -5,14 +5,14 @@ import FoundationNetworking
 
 public struct AppStoreVersionLocalizationUpdateRequest: Codable {
     public struct Data: Codable {
-        public let attributes: AppStoreVersionLocalizationUpdateRequest.Data.Attributes
+        public varattributes: AppStoreVersionLocalizationUpdateRequest.Data.Attributes
 
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "appStoreVersionLocalizations"
     }
 
-    public let data: AppStoreVersionLocalizationUpdateRequest.Data
+    public vardata: AppStoreVersionLocalizationUpdateRequest.Data
 
     init(
         id: String,
@@ -35,16 +35,16 @@ public struct AppStoreVersionLocalizationUpdateRequest: Codable {
 
 public extension AppStoreVersionLocalizationUpdateRequest.Data {
     struct Attributes: Codable {
-        public let description: String?
+        public vardescription: String?
 
-        public let keywords: String?
+        public varkeywords: String?
 
-        public let marketingUrl: URL?
+        public varmarketingUrl: URL?
 
-        public let promotionalText: String?
+        public varpromotionalText: String?
 
-        public let supportUrl: URL?
+        public varsupportUrl: URL?
 
-        public let whatsNew: String?
+        public varwhatsNew: String?
     }
 }

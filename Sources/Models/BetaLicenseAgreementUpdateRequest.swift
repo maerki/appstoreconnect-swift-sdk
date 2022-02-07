@@ -15,17 +15,17 @@ public struct BetaLicenseAgreementUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaLicenseAgreementUpdateRequest.Data.Attributes?
+        public varattributes: BetaLicenseAgreementUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaLicenseAgreements
         public private(set) var type: String = "betaLicenseAgreements"
     }
 
     /// The resource data.
-    public let data: BetaLicenseAgreementUpdateRequest.Data
+    public vardata: BetaLicenseAgreementUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -41,6 +41,6 @@ extension BetaLicenseAgreementUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// The license agreement text for your beta app that displays to users.
-        public let agreementText: String?
+        public varagreementText: String?
     }
 }

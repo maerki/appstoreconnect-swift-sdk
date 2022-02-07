@@ -14,11 +14,11 @@ import FoundationNetworking
 public struct CertificatesResponse: Codable {
 
     /// The paging information details.
-    public let data: [Certificate]
+    public vardata: [Certificate]
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

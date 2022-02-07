@@ -15,17 +15,17 @@ public struct BetaBuildLocalizationUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaBuildLocalizationUpdateRequest.Data.Attributes?
+        public varattributes: BetaBuildLocalizationUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaBuildLocalizations
         public private(set) var type: String = "betaBuildLocalizations"
     }
 
     /// The resource data.
-    public let data: BetaBuildLocalizationUpdateRequest.Data
+    public vardata: BetaBuildLocalizationUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -41,6 +41,6 @@ extension BetaBuildLocalizationUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// A field that describes changes and additions to a build and indicates features you would like your users to test.
-        public let whatsNew: String?
+        public varwhatsNew: String?
     }
 }

@@ -15,17 +15,17 @@ public struct BetaAppLocalizationCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaAppLocalizationCreateRequest.Data.Attributes
+        public varattributes: BetaAppLocalizationCreateRequest.Data.Attributes
 
         /// Navigational links to related data and included resource types and IDs.
-        public let relationships: BetaAppLocalizationCreateRequest.Data.Relationships
+        public varrelationships: BetaAppLocalizationCreateRequest.Data.Relationships
 
         /// The resource type.Value: betaAppLocalizations
         public private(set) var type: String = "betaAppLocalizations"
     }
 
     /// The resource data.
-    public let data: BetaAppLocalizationCreateRequest.Data
+    public vardata: BetaAppLocalizationCreateRequest.Data
 
     /// - Parameters:
     ///   - appId: The opaque resource ID that uniquely identifies the resource.
@@ -60,28 +60,28 @@ extension BetaAppLocalizationCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// A description of your app that highlights features and functionality.
-        public let description: String?
+        public vardescription: String?
 
         /// An email address to which beta testers can send feedback. Also appears as the reply-to address for TestFlight invitation emails.
-        public let feedbackEmail: String?
+        public varfeedbackEmail: String?
 
         /// The specified locale. Refer to Table 1 for possible values.
-        public let locale: String
+        public varlocale: String
 
         /// A URL with information about your app. This URL is visible to testers in the TestFlight app.
-        public let marketingUrl: String?
+        public varmarketingUrl: String?
 
         /// A URL that links to your company’s privacy policy. Privacy policies are recommended for all apps that collect user or device-related data or as otherwise required by law.
-        public let privacyPolicyUrl: String?
+        public varprivacyPolicyUrl: String?
 
         /// Your company’s privacy policy. Privacy policies are recommended for all apps that collect user or device-related data, or as otherwise required by law.
-        public let tvOsPrivacyPolicy: String?
+        public vartvOsPrivacyPolicy: String?
     }
 
     public struct Relationships: Codable {
 
         /// BetaAppLocalizationCreateRequest.Data.Relationships.App (Required)
-        public let app: BetaAppLocalizationCreateRequest.Data.Relationships.App
+        public varapp: BetaAppLocalizationCreateRequest.Data.Relationships.App
     }
 }
 
@@ -91,7 +91,7 @@ extension BetaAppLocalizationCreateRequest.Data.Relationships {
     public struct App: Codable {
 
         /// BetaAppLocalizationCreateRequest.Data.Relationships.App.Data (Required)
-        public let data: BetaAppLocalizationCreateRequest.Data.Relationships.App.Data
+        public vardata: BetaAppLocalizationCreateRequest.Data.Relationships.App.Data
     }
 }
 
@@ -101,7 +101,7 @@ extension BetaAppLocalizationCreateRequest.Data.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"

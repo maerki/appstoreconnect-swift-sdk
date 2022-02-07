@@ -5,7 +5,7 @@ import FoundationNetworking
 
 public struct AppStoreVersionCreateRequest: Codable {
 
-    public let data: AppStoreVersionCreateRequest.Data
+    public vardata: AppStoreVersionCreateRequest.Data
 
     public init(
         appStoreVersionForAppId id: String,
@@ -38,9 +38,9 @@ extension AppStoreVersionCreateRequest {
 
     public struct Data: Codable {
 
-        public let attributes: AppStoreVersionCreateRequest.Data.Attributes
+        public varattributes: AppStoreVersionCreateRequest.Data.Attributes
 
-        public let relationships: AppStoreVersionCreateRequest.Data.Relationships
+        public varrelationships: AppStoreVersionCreateRequest.Data.Relationships
 
         public private(set) var type: String = "appStoreVersions"
     }
@@ -51,24 +51,24 @@ extension AppStoreVersionCreateRequest.Data {
 
     public struct Attributes: Codable {
 
-        public let copyright: String?
+        public varcopyright: String?
 
-        public let earliestReleaseDate: Date?
+        public varearliestReleaseDate: Date?
 
-        public let platform: AppStoreVersionCreateRequest.Data.Attributes.Platform
+        public varplatform: AppStoreVersionCreateRequest.Data.Attributes.Platform
 
-        public let releaseType: AppStoreVersionCreateRequest.Data.Attributes.ReleaseType?
+        public varreleaseType: AppStoreVersionCreateRequest.Data.Attributes.ReleaseType?
 
-        public let usesIdfa: Bool?
+        public varusesIdfa: Bool?
 
-        public let versionString: String
+        public varversionString: String
     }
 
     public struct Relationships: Codable {
 
-        public let app: AppStoreVersionCreateRequest.Data.Relationships.App
+        public varapp: AppStoreVersionCreateRequest.Data.Relationships.App
 
-        public let build: AppStoreVersionCreateRequest.Data.Relationships.Build?
+        public varbuild: AppStoreVersionCreateRequest.Data.Relationships.Build?
     }
 }
 
@@ -93,12 +93,12 @@ extension AppStoreVersionCreateRequest.Data.Relationships {
 
     public struct App: Codable {
 
-        public let data: AppStoreVersionCreateRequest.Data.Relationships.App.Data
+        public vardata: AppStoreVersionCreateRequest.Data.Relationships.App.Data
     }
 
     public struct Build: Codable {
 
-        public let data: AppStoreVersionCreateRequest.Data.Relationships.Build.Data?
+        public vardata: AppStoreVersionCreateRequest.Data.Relationships.Build.Data?
     }
 }
 
@@ -107,7 +107,7 @@ extension AppStoreVersionCreateRequest.Data.Relationships.App {
 
     public struct Data: Codable {
 
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "apps"
     }
@@ -118,7 +118,7 @@ extension AppStoreVersionCreateRequest.Data.Relationships.Build {
 
     public struct Data: Codable {
 
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "builds"
     }

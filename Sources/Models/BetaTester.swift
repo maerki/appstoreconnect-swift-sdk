@@ -16,44 +16,44 @@ public struct BetaTester: Codable {
     public struct Attributes: Codable {
 
         /// The beta tester's email address, used for sending beta testing invitations.
-        public let email: String?
+        public varemail: String?
 
         /// The beta tester's first name.
-        public let firstName: String?
+        public varfirstName: String?
 
         /// An invite type that indicates if a beta tester was invited by an email invite or used a TestFlight public link to join a beta test.
-        public let inviteType: BetaInviteType?
+        public varinviteType: BetaInviteType?
 
         /// The beta tester's last name.
-        public let lastName: String?
+        public varlastName: String?
     }
 
     public struct Relationships: Codable {
 
         /// BetaTester.Relationships.Apps
-        public let apps: BetaTester.Relationships.Apps?
+        public varapps: BetaTester.Relationships.Apps?
 
         /// BetaTester.Relationships.BetaGroups
-        public let betaGroups: BetaTester.Relationships.BetaGroups?
+        public varbetaGroups: BetaTester.Relationships.BetaGroups?
 
         /// BetaTester.Relationships.Builds
-        public let builds: BetaTester.Relationships.Builds?
+        public varbuilds: BetaTester.Relationships.Builds?
     }
 
     /// The resource's attributes.
-    public let attributes: BetaTester.Attributes?
+    public varattributes: BetaTester.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: BetaTester.Relationships?
+    public varrelationships: BetaTester.Relationships?
 
     /// The resource type.Value: betaTesters
     public private(set) var type: String = "betaTesters"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BetaTesterResponse>
+    public varlinks: ResourceLinks<BetaTesterResponse>
 }
 
 // MARK: BetaTester.Relationships
@@ -62,37 +62,37 @@ extension BetaTester.Relationships {
     public struct Apps: Codable {
 
         /// [BetaTester.Relationships.Apps.Data]
-        public let data: [BetaTester.Relationships.Apps.Data]?
+        public vardata: [BetaTester.Relationships.Apps.Data]?
 
         /// BetaTester.Relationships.Apps.Links
-        public let links: BetaTester.Relationships.Apps.Links?
+        public varlinks: BetaTester.Relationships.Apps.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 
     public struct BetaGroups: Codable {
 
         /// [BetaTester.Relationships.BetaGroups.Data]
-        public let data: [BetaTester.Relationships.BetaGroups.Data]?
+        public vardata: [BetaTester.Relationships.BetaGroups.Data]?
 
         /// BetaTester.Relationships.BetaGroups.Links
-        public let links: BetaTester.Relationships.BetaGroups.Links?
+        public varlinks: BetaTester.Relationships.BetaGroups.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 
     public struct Builds: Codable {
 
         /// [BetaTester.Relationships.Builds.Data]
-        public let data: [BetaTester.Relationships.Builds.Data]?
+        public vardata: [BetaTester.Relationships.Builds.Data]?
 
         /// BetaTester.Relationships.Builds.Links
-        public let links: BetaTester.Relationships.Builds.Links?
+        public varlinks: BetaTester.Relationships.Builds.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 }
 
@@ -102,7 +102,7 @@ extension BetaTester.Relationships.Apps {
     public struct Data: Codable {
 
         /// string (Required)
-        public let `id`: String
+        public var`id`: String
 
         /// string (Required)Value: apps
         public private(set) var type: String = "apps"
@@ -111,10 +111,10 @@ extension BetaTester.Relationships.Apps {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }
 
@@ -124,7 +124,7 @@ extension BetaTester.Relationships.BetaGroups {
     public struct Data: Codable {
 
         /// string (Required)
-        public let `id`: String
+        public var`id`: String
 
         /// string (Required)Value: betaGroups
         public private(set) var type: String = "betaGroups"
@@ -133,10 +133,10 @@ extension BetaTester.Relationships.BetaGroups {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }
 
@@ -146,7 +146,7 @@ extension BetaTester.Relationships.Builds {
     public struct Data: Codable {
 
         /// string (Required)
-        public let `id`: String
+        public var`id`: String
 
         /// string (Required)Value: builds
         public private(set) var type: String = "builds"
@@ -155,9 +155,9 @@ extension BetaTester.Relationships.Builds {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

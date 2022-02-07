@@ -5,51 +5,51 @@ import FoundationNetworking
 
 public struct AppScreenshot: Codable {
     public struct Attributes: Codable {
-        public let assetDeliveryState: AppMediaAssetState?
-        public let assetToken: String?
-        public let assetType: String?
-        public let fileName: String?
-        public let fileSize: Int?
-        public let imageAsset: ImageAsset?
-        public let sourceFileChecksum: String?
-        public let uploadOperations: [UploadOperation]?
+        public varassetDeliveryState: AppMediaAssetState?
+        public varassetToken: String?
+        public varassetType: String?
+        public varfileName: String?
+        public varfileSize: Int?
+        public varimageAsset: ImageAsset?
+        public varsourceFileChecksum: String?
+        public varuploadOperations: [UploadOperation]?
     }
 
     public struct Relationships: Codable {
-        public let appScreenshotSet: AppScreenshot.Relationships.AppScreenshotSet?
+        public varappScreenshotSet: AppScreenshot.Relationships.AppScreenshotSet?
     }
 
-    public let attributes: AppScreenshot.Attributes?
+    public varattributes: AppScreenshot.Attributes?
 
-    public let id: String
+    public varid: String
 
-    public let relationships: AppScreenshot.Relationships?
+    public varrelationships: AppScreenshot.Relationships?
 
     public private(set) var type: String = "appScreenshots"
 
-    public let links: ResourceLinks<AppScreenshotResponse>
+    public varlinks: ResourceLinks<AppScreenshotResponse>
 }
 
 public extension AppScreenshot.Relationships {
     struct AppScreenshotSet: Codable {
-        public let data: AppScreenshot.Relationships.AppScreenshotSet.Data?
+        public vardata: AppScreenshot.Relationships.AppScreenshotSet.Data?
 
-        public let links: AppScreenshot.Relationships.AppScreenshotSet.Links?
+        public varlinks: AppScreenshot.Relationships.AppScreenshotSet.Links?
     }
 }
 
 public extension AppScreenshot.Relationships.AppScreenshotSet {
     struct Data: Codable {
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "appScreenshotSets"
     }
 
     struct Links: Codable {
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

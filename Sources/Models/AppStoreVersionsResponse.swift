@@ -12,15 +12,15 @@ import FoundationNetworking
 
 public struct AppStoreVersionsResponse: Codable {
     /// The resource data.
-    public let data: [AppStoreVersion]
+    public vardata: [AppStoreVersion]
 
     /// The requested relationship data.￼
     ///  Possible types: AgeRatingDeclaration, AppStoreVersionLocalization, Build, AppStoreVersionPhasedRelease, RoutingAppCoverage, AppStoreReviewDetail, AppStoreVersionSubmission, IdfaDeclaration
-    public let included: [AppStoreVersionRelationship]?
+    public varincluded: [AppStoreVersionRelationship]?
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

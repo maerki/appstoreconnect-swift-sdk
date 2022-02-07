@@ -16,44 +16,44 @@ public struct User: Codable {
     public struct Attributes: Codable {
 
         /// The user's first name.
-        public let firstName: String?
+        public varfirstName: String?
 
         /// The user's last name.
-        public let lastName: String?
+        public varlastName: String?
 
         /// Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.
-        public let roles: [UserRole]?
+        public varroles: [UserRole]?
 
         /// A Boolean value that indicates the user's specified role allows access to the provisioning functionality on the Apple Developer website.
-        public let provisioningAllowed: Bool?
+        public varprovisioningAllowed: Bool?
 
         /// A Boolean value that indicates whether a user has access to all apps available to the team.
-        public let allAppsVisible: Bool?
+        public varallAppsVisible: Bool?
 
         /// The user's Apple ID.
-        public let username: String?
+        public varusername: String?
     }
 
     public struct Relationships: Codable {
 
         /// User.Relationships.VisibleApps
-        public let visibleApps: User.Relationships.VisibleApps?
+        public varvisibleApps: User.Relationships.VisibleApps?
     }
 
     /// The resource's attributes.
-    public let attributes: User.Attributes?
+    public varattributes: User.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: User.Relationships?
+    public varrelationships: User.Relationships?
 
     /// The resource type.Value: users
     public private(set) var type: String = "users"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<UserResponse>
+    public varlinks: ResourceLinks<UserResponse>
 }
 
 // MARK: User.Relationships
@@ -62,13 +62,13 @@ extension User.Relationships {
     public struct VisibleApps: Codable {
 
         /// [User.Relationships.VisibleApps.Data]
-        public let data: [User.Relationships.VisibleApps.Data]?
+        public vardata: [User.Relationships.VisibleApps.Data]?
 
         /// User.Relationships.VisibleApps.Links
-        public let links: User.Relationships.VisibleApps.Links?
+        public varlinks: User.Relationships.VisibleApps.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 }
 
@@ -78,7 +78,7 @@ extension User.Relationships.VisibleApps {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -87,9 +87,9 @@ extension User.Relationships.VisibleApps {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

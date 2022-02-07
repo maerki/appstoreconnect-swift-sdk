@@ -16,26 +16,26 @@ public struct BetaLicenseAgreement: Codable {
     public struct Attributes: Codable {
 
         /// The license agreement text for your beta app that displays to users.
-        public let agreementText: String?
+        public varagreementText: String?
     }
 
     public struct Relationships: Codable {
 
         /// BetaLicenseAgreement.Relationships.App
-        public let app: BetaLicenseAgreement.Relationships.App?
+        public varapp: BetaLicenseAgreement.Relationships.App?
     }
 
     /// The resource's attributes.
-    public let attributes: BetaLicenseAgreement.Attributes?
+    public varattributes: BetaLicenseAgreement.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BetaLicenseAgreementResponse>
+    public varlinks: ResourceLinks<BetaLicenseAgreementResponse>
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: BetaLicenseAgreement.Relationships?
+    public varrelationships: BetaLicenseAgreement.Relationships?
 
     /// The resource type.Value: betaLicenseAgreements
     public private(set) var type: String = "betaLicenseAgreements"
@@ -48,10 +48,10 @@ extension BetaLicenseAgreement.Relationships {
     public struct App: Codable {
 
         /// BetaLicenseAgreement.Relationships.App.Data
-        public let data: BetaLicenseAgreement.Relationships.App.Data?
+        public vardata: BetaLicenseAgreement.Relationships.App.Data?
 
         /// BetaLicenseAgreement.Relationships.App.Links
-        public let links: BetaLicenseAgreement.Relationships.App.Links?
+        public varlinks: BetaLicenseAgreement.Relationships.App.Links?
     }
 }
 
@@ -61,7 +61,7 @@ extension BetaLicenseAgreement.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -70,9 +70,9 @@ extension BetaLicenseAgreement.Relationships.App {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

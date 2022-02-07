@@ -5,14 +5,14 @@ import FoundationNetworking
 
 public struct AppStoreVersionLocalizationCreateRequest: Codable {
     public struct Data: Codable {
-        public let attributes: AppStoreVersionLocalizationCreateRequest.Data.Attributes
+        public varattributes: AppStoreVersionLocalizationCreateRequest.Data.Attributes
 
-        public let relationships: AppStoreVersionLocalizationCreateRequest.Data.Relationships
+        public varrelationships: AppStoreVersionLocalizationCreateRequest.Data.Relationships
 
         public private(set) var type: String = "appStoreVersionLocalizations"
     }
 
-    public let data: AppStoreVersionLocalizationCreateRequest.Data
+    public vardata: AppStoreVersionLocalizationCreateRequest.Data
 
     init(
         appStoreVersionId: String,
@@ -40,23 +40,23 @@ public struct AppStoreVersionLocalizationCreateRequest: Codable {
 
 public extension AppStoreVersionLocalizationCreateRequest.Data {
     struct Attributes: Codable {
-        public let locale: String
+        public varlocale: String
 
-        public let description: String?
+        public vardescription: String?
 
-        public let keywords: String?
+        public varkeywords: String?
 
-        public let marketingUrl: URL?
+        public varmarketingUrl: URL?
 
-        public let promotionalText: String?
+        public varpromotionalText: String?
 
-        public let supportUrl: URL?
+        public varsupportUrl: URL?
 
-        public let whatsNew: String?
+        public varwhatsNew: String?
     }
 
     struct Relationships: Codable {
-        public let appStoreVersion: AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion
+        public varappStoreVersion: AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion
     }
 }
 
@@ -64,7 +64,7 @@ public extension AppStoreVersionLocalizationCreateRequest.Data {
 
 public extension AppStoreVersionLocalizationCreateRequest.Data.Relationships {
     struct AppStoreVersion: Codable {
-        public let data: AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion.Data
+        public vardata: AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion.Data
     }
 }
 
@@ -72,7 +72,7 @@ public extension AppStoreVersionLocalizationCreateRequest.Data.Relationships {
 
 public extension AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion {
     struct Data: Codable {
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "appStoreVersions"
     }

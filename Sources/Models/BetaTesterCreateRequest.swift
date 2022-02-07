@@ -15,17 +15,17 @@ public struct BetaTesterCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaTesterCreateRequest.Data.Attributes
+        public varattributes: BetaTesterCreateRequest.Data.Attributes
 
         /// The types and IDs of the related data to update.
-        public let relationships: BetaTesterCreateRequest.Data.Relationships?
+        public varrelationships: BetaTesterCreateRequest.Data.Relationships?
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "betaTesters"
     }
 
     /// The resource data.
-    public let data: BetaTesterCreateRequest.Data
+    public vardata: BetaTesterCreateRequest.Data
 
     /// email: The beta tester's email address, used for sending beta testing invitations.
     /// firstName: The beta tester's first name.
@@ -72,22 +72,22 @@ extension BetaTesterCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The beta tester's email address, used for sending beta testing invitations.
-        public let email: String
+        public varemail: String
 
         /// The beta tester's first name.
-        public let firstName: String?
+        public varfirstName: String?
 
         /// The beta tester's last name.
-        public let lastName: String?
+        public varlastName: String?
     }
 
     public struct Relationships: Codable {
 
         /// BetaTesterCreateRequest.Data.Relationships.BetaGroups
-        public let betaGroups: BetaTesterCreateRequest.Data.Relationships.BetaGroups?
+        public varbetaGroups: BetaTesterCreateRequest.Data.Relationships.BetaGroups?
 
         /// BetaTesterCreateRequest.Data.Relationships.Builds
-        public let builds: BetaTesterCreateRequest.Data.Relationships.Builds?
+        public varbuilds: BetaTesterCreateRequest.Data.Relationships.Builds?
     }
 }
 
@@ -97,13 +97,13 @@ extension BetaTesterCreateRequest.Data.Relationships {
     public struct BetaGroups: Codable {
 
         /// [BetaTesterCreateRequest.Data.Relationships.BetaGroups.Data]
-        public let data: [BetaTesterCreateRequest.Data.Relationships.BetaGroups.Data]?
+        public vardata: [BetaTesterCreateRequest.Data.Relationships.BetaGroups.Data]?
     }
 
     public struct Builds: Codable {
 
         /// [BetaTesterCreateRequest.Data.Relationships.Builds.Data]
-        public let data: [BetaTesterCreateRequest.Data.Relationships.Builds.Data]?
+        public vardata: [BetaTesterCreateRequest.Data.Relationships.Builds.Data]?
     }
 }
 
@@ -113,7 +113,7 @@ extension BetaTesterCreateRequest.Data.Relationships.BetaGroups {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaGroups
         public private(set) var type: String = "betaGroups"
@@ -126,7 +126,7 @@ extension BetaTesterCreateRequest.Data.Relationships.Builds {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"

@@ -5,7 +5,7 @@ import FoundationNetworking
 
 public struct AppStoreVersionUpdateRequest: Codable {
 
-    public let data: AppStoreVersionUpdateRequest.Data
+    public vardata: AppStoreVersionUpdateRequest.Data
 
     init(
         id: String,
@@ -38,11 +38,11 @@ extension AppStoreVersionUpdateRequest {
 
     public struct Data: Codable {
 
-        public let attributes: AppStoreVersionUpdateRequest.Data.Attributes?
+        public varattributes: AppStoreVersionUpdateRequest.Data.Attributes?
 
-        public let id: String
+        public varid: String
 
-        public let relationships: AppStoreVersionUpdateRequest.Data.Relationships?
+        public varrelationships: AppStoreVersionUpdateRequest.Data.Relationships?
 
         public private(set) var type: String = "appStoreVersions"
     }
@@ -54,22 +54,22 @@ extension AppStoreVersionUpdateRequest.Data {
 
     public struct Attributes: Codable {
 
-        public let copyright: String?
+        public varcopyright: String?
 
-        public let earliestReleaseDate: Date?
+        public varearliestReleaseDate: Date?
 
-        public let releaseType: ReleaseType?
+        public varreleaseType: ReleaseType?
 
-        public let usesIdfa: Bool?
+        public varusesIdfa: Bool?
 
-        public let versionString: String?
+        public varversionString: String?
 
-        public let downloadable: Bool?
+        public vardownloadable: Bool?
     }
 
     public struct Relationships: Codable {
 
-        public let build: AppStoreVersionUpdateRequest.Data.Relationships.Build?
+        public varbuild: AppStoreVersionUpdateRequest.Data.Relationships.Build?
     }
 }
 
@@ -88,7 +88,7 @@ extension AppStoreVersionUpdateRequest.Data.Relationships {
 
     public struct Build: Codable {
 
-        public let data: AppStoreVersionUpdateRequest.Data.Relationships.Build.Data?
+        public vardata: AppStoreVersionUpdateRequest.Data.Relationships.Build.Data?
     }
 }
 
@@ -97,7 +97,7 @@ extension AppStoreVersionUpdateRequest.Data.Relationships.Build {
 
     public struct Data: Codable {
 
-        public let id: String
+        public varid: String
 
         public private(set) var type: String = "builds"
     }

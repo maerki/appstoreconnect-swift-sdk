@@ -16,26 +16,26 @@ public struct BetaAppReviewSubmission: Codable {
     public struct Attributes: Codable {
 
         /// A state that indicates the current status of the beta app review submission.
-        public let betaReviewState: BetaReviewState?
+        public varbetaReviewState: BetaReviewState?
     }
 
     public struct Relationships: Codable {
 
         /// BetaAppReviewSubmission.Relationships.Build
-        public let build: BetaAppReviewSubmission.Relationships.Build?
+        public varbuild: BetaAppReviewSubmission.Relationships.Build?
     }
 
     /// The resource's attributes.
-    public let attributes: BetaAppReviewSubmission.Attributes?
+    public varattributes: BetaAppReviewSubmission.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BetaAppReviewSubmissionResponse>
+    public varlinks: ResourceLinks<BetaAppReviewSubmissionResponse>
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: BetaAppReviewSubmission.Relationships?
+    public varrelationships: BetaAppReviewSubmission.Relationships?
 
     /// The resource type.Value: betaAppReviewSubmissions
     public private(set) var type: String = "betaAppReviewSubmissions"
@@ -47,10 +47,10 @@ extension BetaAppReviewSubmission.Relationships {
     public struct Build: Codable {
 
         /// BetaAppReviewSubmission.Relationships.Build.Data
-        public let data: BetaAppReviewSubmission.Relationships.Build.Data?
+        public vardata: BetaAppReviewSubmission.Relationships.Build.Data?
 
         /// BetaAppReviewSubmission.Relationships.Build.Links
-        public let links: BetaAppReviewSubmission.Relationships.Build.Links?
+        public varlinks: BetaAppReviewSubmission.Relationships.Build.Links?
     }
 }
 
@@ -60,7 +60,7 @@ extension BetaAppReviewSubmission.Relationships.Build {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
@@ -69,9 +69,9 @@ extension BetaAppReviewSubmission.Relationships.Build {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

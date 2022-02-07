@@ -13,14 +13,14 @@ import FoundationNetworking
 public struct BuildBetaDetailsResponse: Codable {
 
     /// The resource data.
-    public let data: [BuildBetaDetail]
+    public vardata: [BuildBetaDetail]
 
     /// The requested relationship data.
-    public let included: [Build]?
+    public varincluded: [Build]?
 
     /// Navigational links that include the self-link.
-    public let links: PagedDocumentLinks
+    public varlinks: PagedDocumentLinks
 
     /// Paging information.
-    public let meta: PagingInformation?
+    public varmeta: PagingInformation?
 }

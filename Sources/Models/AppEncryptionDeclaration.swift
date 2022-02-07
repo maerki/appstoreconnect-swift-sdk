@@ -17,65 +17,65 @@ public struct AppEncryptionDeclaration: Codable {
     public struct Attributes: Codable {
 
         /// A Boolean value that indicates the intent to distribute your app on the French App Store.
-        public let availableOnFrenchStore: Bool?
+        public varavailableOnFrenchStore: Bool?
 
         /// A unique identifier that can be added to your app to associate it with a given declaration.
-        public let codeValue: String?
+        public varcodeValue: String?
 
         /// A Boolean value that indicates your app implements any proprietary encryption algorithms.
-        public let containsProprietaryCryptography: Bool?
+        public varcontainsProprietaryCryptography: Bool?
 
         /// A Boolean value that indicates your app implements any standard encryption algorithms instead of, or in addition to, using or accessing the encryption in Apple’s operating systems.
-        public let containsThirdPartyCryptography: Bool?
+        public varcontainsThirdPartyCryptography: Bool?
 
         /// The document name of your submitted export compliance documentation.
-        public let documentName: String?
+        public vardocumentName: String?
 
         /// The file type of your submitted export compliance documentation.
-        public let documentType: String?
+        public vardocumentType: String?
 
         /// The URL to the file of your submitted export compliance documentation.
-        public let documentUrl: String?
+        public vardocumentUrl: String?
 
         /// A Boolean value that indicates your app is exempt based on your use of encryption and the app's availability.
-        public let exempt: Bool?
+        public varexempt: Bool?
 
         /// The platform of the declaration.
-        public let platform: Platform?
+        public varplatform: Platform?
 
         /// A Boolean value that indicates whether your app uses, contains, or incorporates cryptography.
-        public let usesEncryption: Bool?
+        public varusesEncryption: Bool?
 
         /// The approval state of your export compliance documentation.
-        public let appEncryptionDeclarationState: AppEncryptionDeclarationState?
+        public varappEncryptionDeclarationState: AppEncryptionDeclarationState?
 
         /// The date and time you submitted your declaration.
-        public let uploadedDate: Date?
+        public varuploadedDate: Date?
     }
 
     public struct Relationships: Codable {
 
         /// AppEncryptionDeclaration.Relationships.App
-        public let app: AppEncryptionDeclaration.Relationships.App?
+        public varapp: AppEncryptionDeclaration.Relationships.App?
 
         /// AppEncryptionDeclaration.Relationships.Builds
-        public let builds: AppEncryptionDeclaration.Relationships.Builds?
+        public varbuilds: AppEncryptionDeclaration.Relationships.Builds?
     }
 
     /// The resource's attributes.
-    public let attributes: AppEncryptionDeclaration.Attributes?
+    public varattributes: AppEncryptionDeclaration.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: AppEncryptionDeclaration.Relationships?
+    public varrelationships: AppEncryptionDeclaration.Relationships?
 
     /// The resource type.Value: appEncryptionDeclarations
     public private(set) var type: String = "appEncryptionDeclarations"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<AppEncryptionDeclarationResponse>
+    public varlinks: ResourceLinks<AppEncryptionDeclarationResponse>
 }
 
 // MARK: AppEncryptionDeclaration.Relationships
@@ -84,22 +84,22 @@ extension AppEncryptionDeclaration.Relationships {
     public struct App: Codable {
 
         /// AppEncryptionDeclaration.Relationships.App.Data
-        public let data: AppEncryptionDeclaration.Relationships.App.Data?
+        public vardata: AppEncryptionDeclaration.Relationships.App.Data?
 
         /// AppEncryptionDeclaration.Relationships.App.Links
-        public let links: AppEncryptionDeclaration.Relationships.App.Links?
+        public varlinks: AppEncryptionDeclaration.Relationships.App.Links?
     }
 
     public struct Builds: Codable {
 
         /// [AppEncryptionDeclaration.Relationships.Builds.Data]
-        public let data: [AppEncryptionDeclaration.Relationships.Builds.Data]?
+        public vardata: [AppEncryptionDeclaration.Relationships.Builds.Data]?
 
         /// AppEncryptionDeclaration.Relationships.Builds.Links
-        public let links: AppEncryptionDeclaration.Relationships.Builds.Links?
+        public varlinks: AppEncryptionDeclaration.Relationships.Builds.Links?
 
         /// PagingInformation
-        public let meta: PagingInformation?
+        public varmeta: PagingInformation?
     }
 }
 
@@ -109,7 +109,7 @@ extension AppEncryptionDeclaration.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -118,10 +118,10 @@ extension AppEncryptionDeclaration.Relationships.App {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }
 
@@ -131,7 +131,7 @@ extension AppEncryptionDeclaration.Relationships.Builds {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
@@ -140,9 +140,9 @@ extension AppEncryptionDeclaration.Relationships.Builds {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

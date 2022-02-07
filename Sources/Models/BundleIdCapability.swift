@@ -17,32 +17,32 @@ public struct BundleIdCapability: Codable {
     public struct Attributes: Codable {
 
         /// The type of the capabillity.
-        public let capabilityType: CapabilityType?
+        public varcapabilityType: CapabilityType?
 
         /// Specific settings for this capability.
-        public let settings: [CapabilitySetting]?
+        public varsettings: [CapabilitySetting]?
     }
 
     public struct Relationships: Codable {
 
         /// BundleIdCapability.Relationships.BundleId
-        public let bundleId: BundleIdCapability.Relationships.BundleId?
+        public varbundleId: BundleIdCapability.Relationships.BundleId?
     }
 
     /// The resource's attributes.
-    public let attributes: BundleIdCapability.Attributes?
+    public varattributes: BundleIdCapability.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let `id`: String
+    public var`id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: BundleIdCapability.Relationships?
+    public varrelationships: BundleIdCapability.Relationships?
 
     /// The resource type.Value: profiles
     public private(set) var type: String = "bundleIdCapabilities"
 
     /// Navigational links that include the self-link.
-    public let links: ResourceLinks<BundleIdCapabilityResponse>
+    public varlinks: ResourceLinks<BundleIdCapabilityResponse>
 }
 
 // MARK: BundleIdCapability.Relationships
@@ -51,10 +51,10 @@ extension BundleIdCapability.Relationships {
     public struct BundleId: Codable {
 
         /// BundleIdCapability.Relationships.BundleId.Data
-        public let data: BundleIdCapability.Relationships.BundleId.Data?
+        public vardata: BundleIdCapability.Relationships.BundleId.Data?
 
         /// BundleIdCapability.Relationships.BundleId.Links
-        public let links: BundleIdCapability.Relationships.BundleId.Links?
+        public varlinks: BundleIdCapability.Relationships.BundleId.Links?
     }
 }
 
@@ -64,7 +64,7 @@ extension BundleIdCapability.Relationships.BundleId {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "bundleIds"
@@ -73,9 +73,9 @@ extension BundleIdCapability.Relationships.BundleId {
     public struct Links: Codable {
 
         /// uri-reference
-        public let related: URL?
+        public varrelated: URL?
 
         /// uri-reference
-        public let `self`: URL?
+        public var`self`: URL?
     }
 }

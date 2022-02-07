@@ -15,17 +15,17 @@ public struct BetaGroupUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BetaGroupUpdateRequest.Data.Attributes?
+        public varattributes: BetaGroupUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: betaGroups
         public private(set) var type: String = "betaGroups"
     }
 
     /// The resource data.
-    public let data: BetaGroupUpdateRequest.Data
+    public vardata: BetaGroupUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -54,15 +54,15 @@ extension BetaGroupUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// The name for the beta group.
-        public let name: String?
+        public varname: String?
 
         /// A Boolean value that indicates whether a public link is enabled. Enabling a link allows you to invite anyone outside of your team to beta test your app. When you share this link, testers will be able to install the beta version of your app on their devices in TestFlight and share the link with others.
-        public let publicLinkEnabled: Bool?
+        public varpublicLinkEnabled: Bool?
 
         /// The maximum number of testers that can join this beta group using the public link. Values must be between 1 and 10,000.
-        public let publicLinkLimit: Int?
+        public varpublicLinkLimit: Int?
 
         /// A Boolean value that limits the number of testers who can join the beta group using the public link.
-        public let publicLinkLimitEnabled: Bool?
+        public varpublicLinkLimitEnabled: Bool?
     }
 }

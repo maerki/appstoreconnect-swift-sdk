@@ -13,11 +13,11 @@ import FoundationNetworking
 public struct ImageAsset: Codable {
 
     /// string
-    public let templateUrl: String?
+    public vartemplateUrl: String?
 
     /// integer
-    public let height: Int?
+    public varheight: Int?
 
     /// integer
-    public let width: Int?
+    public varwidth: Int?
 }

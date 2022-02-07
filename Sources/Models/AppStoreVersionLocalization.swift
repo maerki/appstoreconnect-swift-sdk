@@ -13,32 +13,32 @@ import FoundationNetworking
 public struct AppStoreVersionLocalization: Codable {
     /// Attributes that describe a resource.
     public struct Attributes: Codable {
-        public let description: String?
-        public let keywords: String?
-        public let locale: String?
-        public let marketingUrl: URL?
-        public let promotionalText: String?
-        public let supportUrl: URL?
-        public let whatsNew: String?
+        public vardescription: String?
+        public varkeywords: String?
+        public varlocale: String?
+        public varmarketingUrl: URL?
+        public varpromotionalText: String?
+        public varsupportUrl: URL?
+        public varwhatsNew: String?
     }
 
     public struct Relationships: Codable {
-        public let appPreviewSets: AppStoreVersionLocalization.Relationships.AppPreviewSets?
-        public let appScreenshotSets: AppStoreVersionLocalization.Relationships.AppScreenshotSets?
-        public let appStoreVersion: AppStoreVersionLocalization.Relationships.AppStoreVersion?
+        public varappPreviewSets: AppStoreVersionLocalization.Relationships.AppPreviewSets?
+        public varappScreenshotSets: AppStoreVersionLocalization.Relationships.AppScreenshotSets?
+        public varappStoreVersion: AppStoreVersionLocalization.Relationships.AppStoreVersion?
     }
 
     /// The resource's attributes.
-    public let attributes: AppStoreVersionLocalization.Attributes?
+    public varattributes: AppStoreVersionLocalization.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public let id: String
+    public varid: String
 
     // Navigational links that include the self-link.
-    public let links: ResourceLinks<AppStoreVersionLocalizationResponse>
+    public varlinks: ResourceLinks<AppStoreVersionLocalizationResponse>
 
     /// Navigational links to related data and included resource types and IDs.
-    public let relationships: AppStoreVersionLocalization.Relationships?
+    public varrelationships: AppStoreVersionLocalization.Relationships?
 
     /// The resource type.Value: appStoreVersionLocalizations
     public private(set) var type: String = "appStoreVersionLocalizations"
@@ -49,46 +49,46 @@ public struct AppStoreVersionLocalization: Codable {
 extension AppStoreVersionLocalization.Relationships {
     public struct AppPreviewSets: Codable {
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appPreviewSets"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
 
-        public let data: Data?
-        public let links: Links?
+        public vardata: Data?
+        public varlinks: Links?
     }
 
     public struct AppScreenshotSets: Codable {
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appScreenshotSets"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
 
-        public let data: Data?
-        public let links: Links
+        public vardata: Data?
+        public varlinks: Links
     }
 
     public struct AppStoreVersion: Codable {
         public struct Data: Codable {
-            public let `id`: String
+            public var`id`: String
             public private(set) var type: String = "appStoreReviewDetails"
         }
 
         public struct Links: Codable {
-            public let related: URL?
-            public let `self`: URL?
+            public varrelated: URL?
+            public var`self`: URL?
         }
 
-        public let data: Data?
-        public let links: Links?
+        public vardata: Data?
+        public varlinks: Links?
     }
 }

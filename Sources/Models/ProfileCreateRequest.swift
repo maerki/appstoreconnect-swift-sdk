@@ -16,17 +16,17 @@ public struct ProfileCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: ProfileCreateRequest.Data.Attributes
+        public varattributes: ProfileCreateRequest.Data.Attributes
 
         /// The types and IDs of the related data to update.
-        public let relationships: ProfileCreateRequest.Data.Relationships
+        public varrelationships: ProfileCreateRequest.Data.Relationships
 
         /// The resource type.Value: profiles
         public private(set) var type: String = "profiles"
     }
 
     /// The resource data.
-    public let data: ProfileCreateRequest.Data
+    public vardata: ProfileCreateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -59,22 +59,22 @@ extension ProfileCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The name of the profile.
-        public let name: String?
+        public varname: String?
 
         /// The type of the profile.
-        public let profileType: ProfileType?
+        public varprofileType: ProfileType?
     }
 
     public struct Relationships: Codable {
 
         /// ProfileCreateRequest.Data.Relationships.BundleId (Required)
-        public let bundleId: ProfileCreateRequest.Data.Relationships.BundleId
+        public varbundleId: ProfileCreateRequest.Data.Relationships.BundleId
 
         /// ProfileCreateRequest.Data.Relationships.Certificates (Required)
-        public let certificates: ProfileCreateRequest.Data.Relationships.Certificates
+        public varcertificates: ProfileCreateRequest.Data.Relationships.Certificates
 
         /// ProfileCreateRequest.Data.Relationships.Devices
-        public let devices: ProfileCreateRequest.Data.Relationships.Devices
+        public vardevices: ProfileCreateRequest.Data.Relationships.Devices
     }
 }
 
@@ -84,19 +84,19 @@ extension ProfileCreateRequest.Data.Relationships {
     public struct BundleId: Codable {
 
         /// ProfileCreateRequest.Data.Relationships.BundleId.Data (Required)
-        public let data: ProfileCreateRequest.Data.Relationships.BundleId.Data
+        public vardata: ProfileCreateRequest.Data.Relationships.BundleId.Data
     }
 
     public struct Certificates: Codable {
 
         /// ProfileCreateRequest.Data.Relationships.Certificates.Data (Required)
-        public let data: [ProfileCreateRequest.Data.Relationships.Certificates.Data]
+        public vardata: [ProfileCreateRequest.Data.Relationships.Certificates.Data]
     }
 
     public struct Devices: Codable {
 
         /// ProfileCreateRequest.Data.Relationships.Devices.Data (Required)
-        public let data: [ProfileCreateRequest.Data.Relationships.Devices.Data]
+        public vardata: [ProfileCreateRequest.Data.Relationships.Devices.Data]
     }
 }
 
@@ -106,7 +106,7 @@ extension ProfileCreateRequest.Data.Relationships.BundleId {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "bundleIds"
@@ -119,7 +119,7 @@ extension ProfileCreateRequest.Data.Relationships.Certificates {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "certificates"
@@ -132,7 +132,7 @@ extension ProfileCreateRequest.Data.Relationships.Devices {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "devices"

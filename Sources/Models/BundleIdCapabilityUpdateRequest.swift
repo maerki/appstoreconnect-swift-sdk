@@ -16,17 +16,17 @@ public struct BundleIdCapabilityUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public let attributes: BundleIdCapabilityUpdateRequest.Data.Attributes
+        public varattributes: BundleIdCapabilityUpdateRequest.Data.Attributes
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public let `id`: String
+        public var`id`: String
 
         /// The resource type.Value: bundleIdCapabilities
         public private(set) var type: String = "bundleIdCapabilities"
     }
 
     /// The object types and IDs of the related resources.
-    public let data: BundleIdCapabilityUpdateRequest.Data
+    public vardata: BundleIdCapabilityUpdateRequest.Data
 
     /// - Parameters:
     ///   - bundleId: The opaque resource ID that uniquely identifies the resource.
@@ -51,9 +51,9 @@ extension BundleIdCapabilityUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// The type of the capabillity.
-        public let capabilityType: CapabilityType?
+        public varcapabilityType: CapabilityType?
 
         /// Specific settings for this capability.
-        public let settings: [CapabilitySetting]?
+        public varsettings: [CapabilitySetting]?
     }
 }

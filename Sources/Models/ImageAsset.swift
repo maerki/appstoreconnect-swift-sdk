@@ -6,7 +6,14 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
+=======
+#if os(Linux)
+import FoundationNetworking
+#endif
+    
+>>>>>>> 36fd4f9 (import foundationetworking)
 /// An image asset, including its height, width, and template URL.
 public struct ImageAsset: Codable {
 

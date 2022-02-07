@@ -6,7 +6,14 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
+=======
+#if os(Linux)
+import FoundationNetworking
+#endif
+    
+>>>>>>> 36fd4f9 (import foundationetworking)
 /// Self-links to requested resources.
 public struct ResourceLinks<T: Decodable>: Codable {
 

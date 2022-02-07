@@ -6,7 +6,14 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
+=======
+#if os(Linux)
+import FoundationNetworking
+#endif
+    
+>>>>>>> 36fd4f9 (import foundationetworking)
 /// Detailed error information returned in the response body whenever an API request is not successful.
 public struct ErrorResponse: Error, Decodable {
 

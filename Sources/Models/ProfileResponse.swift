@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 /// A response containing a single resource.
 public struct ProfileResponse: Codable {

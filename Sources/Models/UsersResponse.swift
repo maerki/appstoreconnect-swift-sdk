@@ -6,7 +6,14 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
+=======
+#if os(Linux)
+import FoundationNetworking
+#endif
+    
+>>>>>>> 36fd4f9 (import foundationetworking)
 /// A response containing a list of resources.
 public struct UsersResponse: Codable {
 

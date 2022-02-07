@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 extension APIEndpoint where T == AppStoreVersionPhasedReleaseResponse {
     /// Get the app store phased release status for a specifi version.

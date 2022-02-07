@@ -6,7 +6,14 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
+=======
+#if os(Linux)
+import FoundationNetworking
+#endif
+    
+>>>>>>> 36fd4f9 (import foundationetworking)
 /// The data structure that represents the resource.
 public struct BetaGroup: Codable {
 

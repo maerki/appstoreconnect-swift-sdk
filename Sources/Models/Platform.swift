@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 /// Strings that represent Apple operating systems.
 public enum Platform: String, Codable, CaseIterable {

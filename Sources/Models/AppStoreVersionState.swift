@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum AppStoreVersionState: String, Codable, CaseIterable {
     case developerRemovedFromSale = "DEVELOPER_REMOVED_FROM_SALE"

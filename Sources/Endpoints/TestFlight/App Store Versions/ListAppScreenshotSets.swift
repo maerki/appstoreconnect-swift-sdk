@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public extension APIEndpoint where T == AppScreenshotSetsResponse {
     static func appScreenshotSets(

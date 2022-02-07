@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public struct AppPreviewSetsResponse: Codable {
     public let data: [AppPreviewSet]

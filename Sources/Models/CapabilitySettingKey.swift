@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 /// Strings that represent a capability setting key.
 public enum CapabilitySettingKey: String, Codable {

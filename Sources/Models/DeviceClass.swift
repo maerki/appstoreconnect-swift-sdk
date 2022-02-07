@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum DeviceClass: String, Codable {
     case appleWatch = "APPLE_WATCH"

@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public struct AppStoreVersionLocalizationCreateRequest: Codable {
     public struct Data: Codable {

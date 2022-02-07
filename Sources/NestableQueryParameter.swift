@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 // Represents a query parameter.
 // AppStoreConnect API accepts parameters like `limit` and "nested" ones

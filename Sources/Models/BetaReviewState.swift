@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 public enum BetaReviewState: String, Codable {
     case waitingForReview = "WAITING_FOR_REVIEW"

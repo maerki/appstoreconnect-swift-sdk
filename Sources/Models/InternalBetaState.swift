@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 
 /// String that represents a build's availability for internal testing.
 public enum InternalBetaState: String, Codable {

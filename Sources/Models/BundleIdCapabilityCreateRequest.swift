@@ -22,7 +22,7 @@ public struct BundleIdCapabilityCreateRequest: Codable {
         public let relationships: BundleIdCapabilityCreateRequest.Data.Relationships
 
         /// The resource type.Value: bundleIdCapabilities
-        public let type: String = "bundleIdCapabilities"
+        public private(set) var type: String = "bundleIdCapabilities"
     }
 
     /// The resource data.
@@ -84,6 +84,6 @@ extension BundleIdCapabilityCreateRequest.Data.Relationships.BundleId {
         public let `id`: String
 
         /// The resource type.Value: apps
-        public let type: String = "bundleIds"
+        public private(set) var type: String = "bundleIds"
     }
 }

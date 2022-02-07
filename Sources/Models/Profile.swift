@@ -12,7 +12,7 @@ import FoundationNetworking
 
 /// The data structure that represents the resource.
 public struct Profile: Codable {
-    
+
     /// Attributes that describe a resource.
     public struct Attributes: Codable {
         public let name: String?
@@ -47,7 +47,7 @@ public struct Profile: Codable {
     public let relationships: Profile.Relationships?
 
     /// The resource type.Value: profiles
-    public let type: String = "profiles"
+    public private(set) var type: String = "profiles"
 
     /// Navigational links that include the self-link.
     public let links: ResourceLinks<ProfileResponse>
@@ -99,7 +99,7 @@ extension Profile.Relationships.Certificates {
         public let `id`: String
 
         /// The resource type.Value: apps
-        public let type: String = "certificates"
+        public private(set) var type: String = "certificates"
     }
 
     public struct Links: Codable {
@@ -121,7 +121,7 @@ extension Profile.Relationships.Devices {
         public let `id`: String
 
         /// The resource type.Value: betaTesters
-        public let type: String = "devices"
+        public private(set) var type: String = "devices"
     }
 
     public struct Links: Codable {
@@ -143,7 +143,7 @@ extension Profile.Relationships.BundleId {
         public let `id`: String
 
         /// The resource type.Value: bundleIds
-        public let type: String = "bundleIds"
+        public private(set) var type: String = "bundleIds"
     }
 
     public struct Links: Codable {

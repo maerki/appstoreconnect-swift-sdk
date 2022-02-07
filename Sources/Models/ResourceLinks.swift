@@ -9,7 +9,6 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// Self-links to requested resources.
 public struct ResourceLinks<T: Decodable>: Codable {
 

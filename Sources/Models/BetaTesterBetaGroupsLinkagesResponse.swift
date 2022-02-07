@@ -9,19 +9,18 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing a list of related resource IDs.
 public struct BetaTesterBetaGroupsLinkagesResponse: Codable {
-    
+
     public struct Data: Codable {
-    
+
         /// The opaque resource ID that uniquely identifies the resource.
         public let `id`: String
-    
+
         /// The resource type.Value: betaGroups
-        public let type: String = "betaGroups"
+        public private(set) var type: String = "betaGroups"
     }
-    
+
     /// The object types and IDs of the related resources.
     public let data: [BetaTesterBetaGroupsLinkagesResponse.Data]
 
@@ -30,5 +29,5 @@ public struct BetaTesterBetaGroupsLinkagesResponse: Codable {
 
     /// Paging information.
     public let meta: PagingInformation?
-    
+
 }

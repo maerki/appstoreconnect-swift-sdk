@@ -9,19 +9,18 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing the ID of the related resource.
 public struct BetaLicenseAgreementAppLinkageResponse: Codable {
-    
+
     public struct Data: Codable {
-    
+
         /// The opaque resource ID that uniquely identifies the resource.
         public let `id`: String
-    
+
         /// The resource type.Value: apps
-        public let type: String = "apps"
+        public private(set) var type: String = "apps"
     }
-    
+
     /// A response containing the ID of the related resource.
     public let data: BetaLicenseAgreementAppLinkageResponse.Data
 

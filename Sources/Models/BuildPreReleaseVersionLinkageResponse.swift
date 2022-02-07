@@ -9,19 +9,18 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing the ID of the related resource.
 public struct BuildPreReleaseVersionLinkageResponse: Codable {
-    
+
     public struct Data: Codable {
-    
+
         /// The opaque resource ID that uniquely identifies the resource.
         public let `id`: String
-    
+
         /// The resource type.Value: preReleaseVersions
-        public let type: String = "preReleaseVersions"
+        public private(set) var type: String = "preReleaseVersions"
     }
-    
+
     /// The object types and IDs of the related resources.
     public let data: BuildPreReleaseVersionLinkageResponse.Data
 

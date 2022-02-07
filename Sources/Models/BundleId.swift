@@ -48,7 +48,7 @@ public struct BundleId: Codable {
     public let relationships: BundleId.Relationships?
 
     /// The resource type.Value: bundleIds
-    public let type: String = "bundleIds"
+    public private(set) var type: String = "bundleIds"
 
     /// Navigational links that include the self-link.
     public let links: ResourceLinks<BundleIdResponse>
@@ -91,7 +91,7 @@ extension BundleId.Relationships.Profiles {
         public let `id`: String
 
         /// The resource type.Value: profiles
-        public let type: String = "profiles"
+        public private(set) var type: String = "profiles"
     }
 
     public struct Links: Codable {
@@ -113,7 +113,7 @@ extension BundleId.Relationships.BundleIdCapabilities {
         public let `id`: String
 
         /// The resource type.Value: profiles
-        public let type: String = "bundleIdCapabilities"
+        public private(set) var type: String = "bundleIdCapabilities"
     }
 
     public struct Links: Codable {

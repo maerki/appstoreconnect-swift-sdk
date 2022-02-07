@@ -16,14 +16,15 @@ public enum BuildRelationship: Codable {
     case betaTester(BetaTester)
     case betaAppReviewDetail(BetaAppReviewDetail)
     case buildBetaDetail(BuildBetaDetail)
+    case buildBundles(BuildBundles)
     case preReleaseVersion(PrereleaseVersion)
     case betaAppReviewSubmission(BetaAppReviewSubmission)
-    
+
     enum TypeKeys: String, CodingKey {
         case type
     }
     enum CodingKeys: String, Decodable, CodingKey {
-        case apps, builds, betaTesters, betaAppReviewDetails, buildBetaDetails, preReleaseVersions, betaAppReviewSubmissions
+        case apps, builds, betaTesters, betaAppReviewDetails, buildBetaDetails, buildBundles, preReleaseVersions, betaAppReviewSubmissions
     }
 
     public init(from decoder: Decoder) throws {
@@ -38,13 +39,15 @@ public enum BuildRelationship: Codable {
             self = try .betaAppReviewDetail(BetaAppReviewDetail(from: decoder))
         case .buildBetaDetails:
             self = try .buildBetaDetail(BuildBetaDetail(from: decoder))
+        case .buildBundles:
+            self = try .buildBundles(BuildBundles(from: decoder))
         case .preReleaseVersions:
             self = try .preReleaseVersion(PrereleaseVersion(from: decoder))
         case .betaAppReviewSubmissions:
             self = try .betaAppReviewSubmission(BetaAppReviewSubmission(from: decoder))
         }
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         switch self {
         case .app(let value):
@@ -56,6 +59,8 @@ public enum BuildRelationship: Codable {
         case .betaAppReviewDetail(let value):
             try value.encode(to: encoder)
         case .buildBetaDetail(let value):
+            try value.encode(to: encoder)
+        case .buildBundles(let value):
             try value.encode(to: encoder)
         case .preReleaseVersion(let value):
             try value.encode(to: encoder)

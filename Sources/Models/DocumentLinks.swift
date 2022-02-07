@@ -9,7 +9,6 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// Self-links to documents that can contain information for one or more resources.
 public struct DocumentLinks: Codable {
 

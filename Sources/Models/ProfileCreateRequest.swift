@@ -22,7 +22,7 @@ public struct ProfileCreateRequest: Codable {
         public let relationships: ProfileCreateRequest.Data.Relationships
 
         /// The resource type.Value: profiles
-        public let type: String = "profiles"
+        public private(set) var type: String = "profiles"
     }
 
     /// The resource data.
@@ -109,7 +109,7 @@ extension ProfileCreateRequest.Data.Relationships.BundleId {
         public let `id`: String
 
         /// The resource type.Value: apps
-        public let type: String = "bundleIds"
+        public private(set) var type: String = "bundleIds"
     }
 }
 
@@ -122,7 +122,7 @@ extension ProfileCreateRequest.Data.Relationships.Certificates {
         public let `id`: String
 
         /// The resource type.Value: apps
-        public let type: String = "certificates"
+        public private(set) var type: String = "certificates"
     }
 }
 
@@ -135,6 +135,6 @@ extension ProfileCreateRequest.Data.Relationships.Devices {
         public let `id`: String
 
         /// The resource type.Value: apps
-        public let type: String = "devices"
+        public private(set) var type: String = "devices"
     }
 }

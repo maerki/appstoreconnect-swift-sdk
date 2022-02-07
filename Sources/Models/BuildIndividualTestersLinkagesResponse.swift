@@ -9,19 +9,18 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing a list of related resource IDs.
 public struct BuildIndividualTestersLinkagesResponse: Codable {
-    
+
     public struct Data: Codable {
-    
+
         /// The opaque resource ID that uniquely identifies the resource.
         public let `id`: String
-    
+
         /// The resource type.Value: betaTesters
-        public let type: String = "betaTesters"
+        public private(set) var type: String = "betaTesters"
     }
-    
+
     /// The object types and IDs of the related resources.
     public let data: [BuildIndividualTestersLinkagesResponse.Data]
 

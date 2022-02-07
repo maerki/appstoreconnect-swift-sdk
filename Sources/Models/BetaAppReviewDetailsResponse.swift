@@ -9,7 +9,6 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing a list of resources.
 public struct BetaAppReviewDetailsResponse: Codable {
 

@@ -9,19 +9,18 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-    
 /// A response containing the ID of the related resource.
 public struct BuildBetaAppReviewSubmissionLinkageResponse: Codable {
-    
+
     public struct Data: Codable {
-    
+
         /// The opaque resource ID that uniquely identifies the resource.
         public let `id`: String
-    
+
         /// The resource type.Value: betaAppReviewSubmissions
-        public let type: String = "betaAppReviewSubmissions"
+        public private(set) var type: String = "betaAppReviewSubmissions"
     }
-    
+
     /// The object types and IDs of the related resources.
     public let data: BuildBetaAppReviewSubmissionLinkageResponse.Data
 

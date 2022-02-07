@@ -32,7 +32,7 @@ extension APIEndpoint where T == Data {
 }
 
 public enum DownloadFinanceReports {
-    
+
     public enum RegionCode: String, CaseIterable {
         case AE // United Arab Emirates
         case AU // Australia

@@ -13,11 +13,11 @@ import FoundationNetworking
 public struct BetaLicenseAgreementResponse: Codable {
 
     /// The resource data.
-    public vardata: BetaLicenseAgreement
+    public var data: BetaLicenseAgreement
 
     /// The requested relationship data.
-    public varincluded: [App]?
+    public var included: [App]?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

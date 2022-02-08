@@ -12,12 +12,12 @@ import FoundationNetworking
 
 /// The data structure that represents the resource.
 public struct CapabilityOption: Codable {
-    public vardescription: String?
-    public varenabled: Bool?
-    public varenabledByDefault: Bool?
-    public varkey: CapabilityOptionKey?
-    public varname: String?
-    public varsupportsWildcard: Bool?
+    public var description: String?
+    public var enabled: Bool?
+    public var enabledByDefault: Bool?
+    public var key: CapabilityOptionKey?
+    public var name: String?
+    public var supportsWildcard: Bool?
 
     public init(
         description: String? = nil,

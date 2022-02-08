@@ -4,7 +4,7 @@ import FoundationNetworking
 #endif
 
 public struct AppPreviewResponse: Codable {
-    public vardata: AppPreview
+    public var data: AppPreview
 
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 }

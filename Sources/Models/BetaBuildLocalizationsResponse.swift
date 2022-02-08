@@ -13,14 +13,14 @@ import FoundationNetworking
 public struct BetaBuildLocalizationsResponse: Codable {
 
     /// The resource data.
-    public vardata: [BetaBuildLocalization]
+    public var data: [BetaBuildLocalization]
 
     /// The requested relationship data.
-    public varincluded: [Build]?
+    public var included: [Build]?
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

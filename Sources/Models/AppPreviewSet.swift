@@ -5,70 +5,70 @@ import FoundationNetworking
 
 public struct AppPreviewSet: Codable {
     public struct Attributes: Codable {
-        public varpreviewType: String?
+        public var previewType: String?
     }
 
     public struct Relationships: Codable {
-        public varappPreviews: AppPreviewSet.Relationships.AppPreviews?
+        public var appPreviews: AppPreviewSet.Relationships.AppPreviews?
 
-        public varappStoreVersionLocalization: AppPreviewSet.Relationships.AppStoreVersionLocalization?
+        public var appStoreVersionLocalization: AppPreviewSet.Relationships.AppStoreVersionLocalization?
     }
 
-    public varattributes: AppScreenshot.Attributes?
+    public var attributes: AppScreenshot.Attributes?
 
-    public varid: String
+    public var id: String
 
-    public varrelationships: AppScreenshot.Relationships?
+    public var relationships: AppScreenshot.Relationships?
 
     public private(set) var type: String = "appPreviewSets"
 
-    public varlinks: ResourceLinks<AppScreenshotResponse>
+    public var links: ResourceLinks<AppScreenshotResponse>
 }
 
 public extension AppPreviewSet.Relationships {
     struct AppPreviews: Codable {
-        public vardata: AppPreviewSet.Relationships.AppPreviews.Data?
+        public var data: AppPreviewSet.Relationships.AppPreviews.Data?
 
-        public varlinks: AppPreviewSet.Relationships.AppPreviews.Links?
+        public var links: AppPreviewSet.Relationships.AppPreviews.Links?
 
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 
     struct AppStoreVersionLocalization: Codable {
-        public vardata: AppPreviewSet.Relationships.AppStoreVersionLocalization.Data?
+        public var data: AppPreviewSet.Relationships.AppStoreVersionLocalization.Data?
 
-        public varlinks: AppPreviewSet.Relationships.AppStoreVersionLocalization.Links?
+        public var links: AppPreviewSet.Relationships.AppStoreVersionLocalization.Links?
     }
 }
 
 public extension AppPreviewSet.Relationships.AppPreviews {
     struct Data: Codable {
-        public varid: String
+        public var id: String
 
         public private(set) var type: String = "appPreviews"
     }
 
     struct Links: Codable {
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }
 
 public extension AppPreviewSet.Relationships.AppStoreVersionLocalization {
     struct Data: Codable {
-        public varid: String
+        public var id: String
 
         public private(set) var type: String = "appStoreVersionLocalizations"
     }
 
     struct Links: Codable {
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

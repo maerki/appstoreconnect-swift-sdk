@@ -16,15 +16,15 @@ public struct ProfileBundleIdLinkageResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: bundleIds
         public private(set) var type: String = "bundleIds"
     }
 
     /// The object types and IDs of the related resources.
-    public vardata: [ProfileBundleIdLinkageResponse.Data]
+    public var data: [ProfileBundleIdLinkageResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

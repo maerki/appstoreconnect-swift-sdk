@@ -11,7 +11,6 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-import JWTKit
 
 /// The JWT Header contains information specific to the App Store Connect API Keys, such as algorithm and keys.
 struct Header: Codable {
@@ -33,7 +32,7 @@ struct Header: Codable {
 }
 
 /// The JWT Payload contains information specific to the App Store Connect APIs, such as issuer ID and expiration time.
-struct Payload: Codable, JWTPayload {
+struct Payload: Codable {
     
     enum CodingKeys: String, CodingKey {
         case issuerIdentifier = "iss"
@@ -53,9 +52,6 @@ struct Payload: Codable, JWTPayload {
     /// The required audience which is set to the App Store Connect version.
     let audience: String = "appstoreconnect-v1"
 
-    func verify(using signer: JWTSigner) throws {
-
-    }
 }
 
 /*
@@ -65,7 +61,11 @@ protocol JWTCreatable {
 }
  */
 
-struct JWT: Codable {
+protocol JWTCreatable {
+    func signedToken(using privateKey: JWT.P8PrivateKey) throws -> JWT.Token
+}
+
+struct JWT: Codable, JWTCreatable {
 
 
 
@@ -83,7 +83,7 @@ struct JWT: Codable {
         /// In case the ASN1 could not be generated.
         case invalidASN1
 
-        public var localizedDescription: String {
+        public var  localizedDescription: String {
             switch self {
             case .invalidP8PrivateKey:
                 return "The provided .p8 private key is of an invalid format"
@@ -101,10 +101,10 @@ struct JWT: Codable {
     typealias P8PrivateKey = String
 
     /// The JWT Header contains information specific to the App Store Connect API Keys, such as algorithm and keys.
-    let header: Header
+    private let header: Header
 
     /// The JWT Payload contains information specific to the App Store Connect APIs, such as issuer ID and expiration time.
-    let payload: Payload
+    private let payload: Payload
 
     /// Creates a new JWT Factory to create signed requests for the App Store Connect API.
     ///
@@ -124,6 +124,21 @@ struct JWT: Codable {
         return "\(headerString).\(payloadString)"
     }
 
+    /// Creates a signed JWT Token which can be used as a Bearer Authentication header value for signing App Store Connect API Requests.
+    ///
+    /// - Parameter privateKey: The .p8 private key to use for signing. You can get this value from the downloaded .p8 file.
+    /// - Returns: A signed JWT.Token value which can be used as a value for the Bearer Authentication header.
+    /// - Throws: An error if something went wrong, like a JWT.Error.
+    public func signedToken(using privateKey: P8PrivateKey) throws -> JWT.Token {
+        let digest = try self.digest()
+
+        let signature = try privateKey.toASN1()
+            .toECKeyData()
+            .toPrivateKey()
+            .es256Sign(digest: digest)
+
+        return "\(digest).\(signature)"
+    }
 }
 
 internal extension Data {
@@ -150,3 +165,13 @@ internal extension String {
     }
 }
 
+private extension JWT.P8PrivateKey {
+
+    /// Converts the PEM formatted .p8 private key to a DER-encoded ASN.1 data object.
+    func toASN1() throws -> Data {
+        guard let asn1 = Data(base64Encoded: self) else {
+            throw JWT.Error.invalidP8PrivateKey
+        }
+        return asn1
+    }
+}

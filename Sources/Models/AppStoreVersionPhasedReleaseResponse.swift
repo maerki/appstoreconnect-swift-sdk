@@ -15,25 +15,25 @@ public struct AppStoreVersionPhasedReleaseResponse: Codable {
     public struct Attributes: Codable {
 
         /// The number of days since the release was started.
-        public varcurrentDayNumber: Int?
+        public var currentDayNumber: Int?
 
         /// The current state of the release of this version.
-        public varphasedReleaseState: PhasedReleaseState?
+        public var phasedReleaseState: PhasedReleaseState?
 
         /// The start date for the release of this version.
-        public varstartDate: Date?
+        public var startDate: Date?
 
         /// The total amount of days the app store version has been paused for.
-        public vartotalPauseDuration: Int?
+        public var totalPauseDuration: Int?
     }
 
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource's attributes.
-        public varattributes: Attributes?
+        public var attributes: Attributes?
 
         /// The resource type.Value: appStoreVersionPhasedReleases
         public private(set) var type: String = "appStoreVersionPhasedReleases"
@@ -41,9 +41,9 @@ public struct AppStoreVersionPhasedReleaseResponse: Codable {
     }
 
     /// The object types and IDs of the related resources.
-    public vardata: Data
+    public var data: Data
 
     /// Navigational links including the self-link and links to the related data.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
 }

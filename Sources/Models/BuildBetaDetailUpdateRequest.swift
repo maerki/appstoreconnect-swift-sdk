@@ -15,17 +15,17 @@ public struct BuildBetaDetailUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BuildBetaDetailUpdateRequest.Data.Attributes?
+        public var attributes: BuildBetaDetailUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: buildBetaDetails
         public private(set) var type: String = "buildBetaDetails"
     }
 
     /// The resource data.
-    public vardata: BuildBetaDetailUpdateRequest.Data
+    public var data: BuildBetaDetailUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -41,6 +41,6 @@ extension BuildBetaDetailUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// A Boolean value that enables you to send test invitations to users automatically when the build is available to external groups.
-        public varautoNotifyEnabled: Bool?
+        public var autoNotifyEnabled: Bool?
     }
 }

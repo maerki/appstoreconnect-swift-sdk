@@ -13,13 +13,13 @@ import FoundationNetworking
 public struct PagedDocumentLinks: Codable {
 
     /// The link to the first page of documents.
-    public varfirst: URL?
+    public var first: URL?
 
     /// The link to the next page of documents.
-    public varnext: URL?
+    public var next: URL?
 
     /// The link that produced the current document.
-    public var`self`: URL
+    public var `self`: URL
 }
 
 extension PagedDocumentLinks {

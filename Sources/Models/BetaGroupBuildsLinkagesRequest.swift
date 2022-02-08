@@ -15,14 +15,14 @@ public struct BetaGroupBuildsLinkagesRequest: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
     }
 
     /// The types and IDs of related resources.
-    public vardata: [BetaGroupBuildsLinkagesRequest.Data]
+    public var data: [BetaGroupBuildsLinkagesRequest.Data]
 
     /// - Parameters:
     ///   - buildIds: Array of opaque resource ID that uniquely identifies the resources.

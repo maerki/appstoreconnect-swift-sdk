@@ -14,11 +14,11 @@ import FoundationNetworking
 public struct BundleIdCapabilitiesResponse: Codable {
 
     /// The object types and IDs of the related resources.
-    public vardata: [BundleIdCapability]
+    public var data: [BundleIdCapability]
 
     /// Navigational links including the self-link and links to the related data.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

@@ -15,17 +15,17 @@ public struct BetaGroupCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BetaGroupCreateRequest.Data.Attributes
+        public var attributes: BetaGroupCreateRequest.Data.Attributes
 
         /// Navigational links to related data and included resource types and IDs.
-        public varrelationships: BetaGroupCreateRequest.Data.Relationships
+        public var relationships: BetaGroupCreateRequest.Data.Relationships
 
         /// The resource type.Value: betaGroups
         public private(set) var type: String = "betaGroups"
     }
 
     /// The resource data.
-    public vardata: BetaGroupCreateRequest.Data
+    public var data: BetaGroupCreateRequest.Data
 
     /// - Parameters:
     ///   - appId: The opaque resource ID that uniquely identifies the resource.
@@ -64,28 +64,28 @@ extension BetaGroupCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The name for the beta group.
-        public varname: String
+        public var name: String
 
         /// A Boolean value that indicates whether a public link is enabled. Enabling a link allows you to invite anyone outside of your team to beta test your app. When you share this link, testers will be able to install the beta version of your app on their devices in TestFlight and share the link with others.
-        public varpublicLinkEnabled: Bool?
+        public var publicLinkEnabled: Bool?
 
         /// The maximum number of testers that can join this beta group using the public link. Values must be between 1 and 10,000.
-        public varpublicLinkLimit: Int?
+        public var publicLinkLimit: Int?
 
         /// A Boolean value that limits the number of testers who can join the beta group using the public link.
-        public varpublicLinkLimitEnabled: Bool?
+        public var publicLinkLimitEnabled: Bool?
     }
 
     public struct Relationships: Codable {
 
         /// BetaGroupCreateRequest.Data.Relationships.App (Required)
-        public varapp: BetaGroupCreateRequest.Data.Relationships.App
+        public var app: BetaGroupCreateRequest.Data.Relationships.App
 
         /// BetaGroupCreateRequest.Data.Relationships.BetaTesters
-        public varbetaTesters: BetaGroupCreateRequest.Data.Relationships.BetaTesters?
+        public var betaTesters: BetaGroupCreateRequest.Data.Relationships.BetaTesters?
 
         /// BetaGroupCreateRequest.Data.Relationships.Builds
-        public varbuilds: BetaGroupCreateRequest.Data.Relationships.Builds?
+        public var builds: BetaGroupCreateRequest.Data.Relationships.Builds?
     }
 }
 
@@ -95,19 +95,19 @@ extension BetaGroupCreateRequest.Data.Relationships {
     public struct App: Codable {
 
         /// BetaGroupCreateRequest.Data.Relationships.App.Data (Required)
-        public vardata: BetaGroupCreateRequest.Data.Relationships.App.Data
+        public var data: BetaGroupCreateRequest.Data.Relationships.App.Data
     }
 
     public struct BetaTesters: Codable {
 
         /// [BetaGroupCreateRequest.Data.Relationships.BetaTesters.Data]
-        public vardata: [BetaGroupCreateRequest.Data.Relationships.BetaTesters.Data]?
+        public var data: [BetaGroupCreateRequest.Data.Relationships.BetaTesters.Data]?
     }
 
     public struct Builds: Codable {
 
         /// [BetaGroupCreateRequest.Data.Relationships.Builds.Data]
-        public vardata: [BetaGroupCreateRequest.Data.Relationships.Builds.Data]?
+        public var data: [BetaGroupCreateRequest.Data.Relationships.Builds.Data]?
     }
 }
 
@@ -117,7 +117,7 @@ extension BetaGroupCreateRequest.Data.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -130,7 +130,7 @@ extension BetaGroupCreateRequest.Data.Relationships.BetaTesters {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "betaTesters"
@@ -143,7 +143,7 @@ extension BetaGroupCreateRequest.Data.Relationships.Builds {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"

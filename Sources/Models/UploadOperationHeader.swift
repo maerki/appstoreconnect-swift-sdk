@@ -4,6 +4,6 @@ import FoundationNetworking
 #endif
 
 public struct UploadOperationHeader: Codable {
-    public varname: String?
-    public varvalue: String?
+    public var name: String?
+    public var value: String?
 }

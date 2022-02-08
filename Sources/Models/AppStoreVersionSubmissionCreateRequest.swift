@@ -7,12 +7,12 @@ public struct AppStoreVersionSubmissionCreateRequest: Codable {
 
     public struct Data: Codable {
 
-        public varrelationships: AppStoreVersionSubmissionCreateRequest.Data.Relationships
+        public var relationships: AppStoreVersionSubmissionCreateRequest.Data.Relationships
 
         public private(set) var type: String = "appStoreVersionSubmissions"
     }
 
-    public vardata: AppStoreVersionSubmissionCreateRequest.Data
+    public var data: AppStoreVersionSubmissionCreateRequest.Data
 
     init(appStoreVersionId: String) {
         self.data = .init(relationships: .init(appStoreVersion: .init(data: .init(id: appStoreVersionId))))
@@ -24,7 +24,7 @@ extension AppStoreVersionSubmissionCreateRequest.Data {
 
     public struct Relationships: Codable {
 
-        public varappStoreVersion: AppStoreVersionSubmissionCreateRequest.Data.Relationships.AppStoreVersion
+        public var appStoreVersion: AppStoreVersionSubmissionCreateRequest.Data.Relationships.AppStoreVersion
 
     }
 }
@@ -34,7 +34,7 @@ extension AppStoreVersionSubmissionCreateRequest.Data.Relationships {
 
     public struct AppStoreVersion: Codable {
 
-        public vardata: AppStoreVersionSubmissionCreateRequest.Data.Relationships.AppStoreVersion.Data
+        public var data: AppStoreVersionSubmissionCreateRequest.Data.Relationships.AppStoreVersion.Data
 
     }
 }
@@ -44,7 +44,7 @@ extension AppStoreVersionSubmissionCreateRequest.Data.Relationships.AppStoreVers
 
     public struct Data: Codable {
 
-        public varid: String
+        public var id: String
 
         public private(set) var type: String = "appStoreVersions"
 

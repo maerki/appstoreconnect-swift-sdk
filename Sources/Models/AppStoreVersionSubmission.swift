@@ -4,11 +4,11 @@ import FoundationNetworking
 #endif
 
 public struct AppStoreVersionSubmission: Codable {
-    public varid: String
+    public var id: String
 
-    public varlinks: ResourceLinks<AppStoreVersionSubmissionResponse>
+    public var links: ResourceLinks<AppStoreVersionSubmissionResponse>
 
-    public varrelationships: AppStoreVersionSubmission.Relationships?
+    public var relationships: AppStoreVersionSubmission.Relationships?
 
     public private(set) var type: String = "appStoreVersionSubmissions"
 }
@@ -18,7 +18,7 @@ extension AppStoreVersionSubmission {
 
     public struct Relationships: Codable {
 
-        public varappStoreVersion: AppStoreVersionSubmission.Relationships.AppStoreVersion?
+        public var appStoreVersion: AppStoreVersionSubmission.Relationships.AppStoreVersion?
 
     }
 }
@@ -28,9 +28,9 @@ extension AppStoreVersionSubmission.Relationships {
 
     public struct AppStoreVersion: Codable {
 
-        public vardata: AppStoreVersionSubmission.Relationships.AppStoreVersion.Data?
+        public var data: AppStoreVersionSubmission.Relationships.AppStoreVersion.Data?
 
-        public varlinks: AppStoreVersionSubmission.Relationships.AppStoreVersion.Links?
+        public var links: AppStoreVersionSubmission.Relationships.AppStoreVersion.Links?
     }
 }
 
@@ -38,14 +38,14 @@ extension AppStoreVersionSubmission.Relationships {
 extension AppStoreVersionSubmission.Relationships.AppStoreVersion {
 
     public struct Data: Codable {
-        public varid: String
+        public var id: String
 
         public private(set) var type: String = "appStoreVersions"
     }
 
     public struct Links: Codable {
-        public varrelated: URL?
+        public var related: URL?
 
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

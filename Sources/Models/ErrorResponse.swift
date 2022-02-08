@@ -16,27 +16,27 @@ public struct ErrorResponse: Error, Decodable {
     public struct Errors: Decodable {
 
         /// A machine-readable code indicating the type of error. The code is a hierarchical value with levels of specificity separated by the '.' character. This value is parseable for programmatic error handling in code.
-        public varcode: String
+        public var code: String
 
         /// The HTTP status code of the error. This status code usually matches the response's status code; however, if the request produces multiple errors, these two codes may differ.
-        public varstatus: String
+        public var status: String
 
         /// The unique ID of a specific instance of an error, request, and response. Use this ID when providing feedback to or debugging issues with Apple.
-        public var`id`: String?
+        public var `id`: String?
 
         /// A summary of the error. Do not use this field for programmatic error handling.
-        public vartitle: String
+        public var title: String
 
         /// A detailed explanation of the error. Do not use this field for programmatic error handling.
-        public vardetail: String
+        public var detail: String
 
         /// One of two possible types of values: source.parameter, provided when a query parameter produced the error, or source.JsonPointer, provided when a problem with the entity produced the error.￼
         ///  Possible types: ErrorResponse.Errors.JsonPointer, ErrorResponse.Errors.Parameter
-        public varsource: Source?
+        public var source: Source?
     }
 
     /// An array of one or more errors.
-    public varerrors: [ErrorResponse.Errors]?
+    public var errors: [ErrorResponse.Errors]?
 }
 
 // MARK: ErrorResponse.Errors
@@ -45,14 +45,14 @@ extension ErrorResponse.Errors {
     public struct JsonPointer: Decodable {
 
         /// A JSON pointer that indicates the location in the request entity where the error originates.
-        public varpointer: String?
+        public var pointer: String?
     }
 
     /// An object containing the query parameter that produced the error.
     public struct Parameter: Decodable {
 
         /// The query parameter that produced the error.
-        public varparameter: String?
+        public var parameter: String?
     }
 
     public enum Source: Decodable {

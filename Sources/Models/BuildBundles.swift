@@ -14,21 +14,21 @@ public struct BuildBundles: Codable {
     public struct Attributes: Codable {
 
         // The bundle ID of the build bundle.
-        public varbundleId: String
+        public var bundleId: String
 
         // The type of the build bundle.
-        public varbundleType: String
+        public var bundleType: String
 
         // True if build bundle contains symbols
-        public varincludesSymbols: Bool
+        public var includesSymbols: Bool
 
         // URL to the dSYM if available
-        public vardSYMUrl: URL?
+        public var dSYMUrl: URL?
     }
 
     // The opaque resource ID that uniquely identifies a Build
-    public varid: String
+    public var id: String
 
     // The attributes that describe the Build Bundles resource.
-    public varattributes: Attributes
+    public var attributes: Attributes
 }

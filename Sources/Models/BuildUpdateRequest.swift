@@ -15,20 +15,20 @@ public struct BuildUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BuildUpdateRequest.Data.Attributes?
+        public var attributes: BuildUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// Navigational links to related data and included resource types and IDs.
-        public varrelationships: BuildUpdateRequest.Data.Relationships?
+        public var relationships: BuildUpdateRequest.Data.Relationships?
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
     }
 
     /// The resource data.
-    public vardata: BuildUpdateRequest.Data
+    public var data: BuildUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -54,16 +54,16 @@ extension BuildUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// A Boolean value that indicates if the build has expired. An expired build is unavailable for testing.
-        public varexpired: Bool?
+        public var expired: Bool?
 
         /// A Boolean value that indicates whether the build uses non-exempt encryption.
-        public varusesNonExemptEncryption: Bool?
+        public var usesNonExemptEncryption: Bool?
     }
 
     public struct Relationships: Codable {
 
         /// BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration
-        public varappEncryptionDeclaration: BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration?
+        public var appEncryptionDeclaration: BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration?
     }
 }
 
@@ -73,7 +73,7 @@ extension BuildUpdateRequest.Data.Relationships {
     public struct AppEncryptionDeclaration: Codable {
 
         /// BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration.Data
-        public vardata: BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration.Data?
+        public var data: BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration.Data?
     }
 }
 
@@ -83,7 +83,7 @@ extension BuildUpdateRequest.Data.Relationships.AppEncryptionDeclaration {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: appEncryptionDeclarations
         public private(set) var type: String = "appEncryptionDeclarations"

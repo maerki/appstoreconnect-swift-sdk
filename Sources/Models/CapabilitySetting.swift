@@ -12,14 +12,14 @@ import FoundationNetworking
 
 /// The data structure that represents the resource.
 public struct CapabilitySetting: Codable {
-    public varallowedInstances: CapabilitySettingAllowedInstances?
-    public vardescription: String?
-    public varenabledByDefault: Bool?
-    public varkey: CapabilitySettingKey?
-    public varname: String?
-    public varoptions: [CapabilityOption]?
-    public varvisible: Bool?
-    public varminInstances: Int?
+    public var allowedInstances: CapabilitySettingAllowedInstances?
+    public var description: String?
+    public var enabledByDefault: Bool?
+    public var key: CapabilitySettingKey?
+    public var name: String?
+    public var options: [CapabilityOption]?
+    public var visible: Bool?
+    public var minInstances: Int?
 
     public init(
         allowedInstances: CapabilitySettingAllowedInstances? = nil,

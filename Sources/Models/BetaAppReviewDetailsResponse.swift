@@ -13,14 +13,14 @@ import FoundationNetworking
 public struct BetaAppReviewDetailsResponse: Codable {
 
     /// The resource data.
-    public vardata: [BetaAppReviewDetail]
+    public var data: [BetaAppReviewDetail]
 
     /// The requested relationship data.
-    public varincluded: [App]?
+    public var included: [App]?
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

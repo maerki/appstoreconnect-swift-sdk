@@ -13,5 +13,5 @@ import FoundationNetworking
 public struct ResourceLinks<T: Decodable>: Codable {
 
     /// The link to the resource.
-    public var`self`: URL
+    public var `self`: URL
 }

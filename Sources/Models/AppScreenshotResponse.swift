@@ -4,7 +4,7 @@ import FoundationNetworking
 #endif
 
 public struct AppScreenshotResponse: Codable {
-    public vardata: AppScreenshot
+    public var data: AppScreenshot
 
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 }

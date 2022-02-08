@@ -16,45 +16,45 @@ public struct AppInfo: Codable {
     public struct Attributes: Codable {
 
         /// The age rating.
-        public varappStoreAgeRating: AppStoreAgeRating?
+        public var appStoreAgeRating: AppStoreAgeRating?
 
         /// The state of the app.
-        public varappStoreState: AppStoreVersionState?
+        public var appStoreState: AppStoreVersionState?
 
         /// The age rating for Brazil.
-        public varbrazilAgeRating: BrazilAgeRating?
+        public var brazilAgeRating: BrazilAgeRating?
 
         /// The range of ages the app is designed for.
-        public varkidsAgeBand: KidsAgeBand?
+        public var kidsAgeBand: KidsAgeBand?
     }
 
     public struct Relationships: Codable {
-        public varapp: AppInfo.Relationships.App?
+        public var app: AppInfo.Relationships.App?
 
         // Not implemented yet
-//        public varappInfoLocalizations: AppInfo.Relationships.AppInfoLocalizations?
-//        public varprimaryCategory: AppInfo.Relationships.PrimaryCategory?
-//        public varprimarySubcategoryOne: AppInfo.Relationships.PrimarySubcategoryOne?
-//        public varprimarySubcategoryTwo: AppInfo.Relationships.PrimarySubcategoryTwo?
-//        public varsecondaryCategory: AppInfo.Relationships.SecondaryCategory?
-//        public varsecondarySubcategoryOne: AppInfo.Relationships.SecondarySubcategoryOne?
-//        public varsecondarySubcategoryTwo: AppInfo.Relationships.SecondarySubcategoryTwo?
+//        public var appInfoLocalizations: AppInfo.Relationships.AppInfoLocalizations?
+//        public var primaryCategory: AppInfo.Relationships.PrimaryCategory?
+//        public var primarySubcategoryOne: AppInfo.Relationships.PrimarySubcategoryOne?
+//        public var primarySubcategoryTwo: AppInfo.Relationships.PrimarySubcategoryTwo?
+//        public var secondaryCategory: AppInfo.Relationships.SecondaryCategory?
+//        public var secondarySubcategoryOne: AppInfo.Relationships.SecondarySubcategoryOne?
+//        public var secondarySubcategoryTwo: AppInfo.Relationships.SecondarySubcategoryTwo?
     }
 
     /// The resource's attributes.
-    public varattributes: AppInfo.Attributes?
+    public var attributes: AppInfo.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public varid: String
+    public var id: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public varrelationships: AppInfo.Relationships?
+    public var relationships: AppInfo.Relationships?
 
     /// The resource type.Value: apps
     public private(set) var type: String = "appInfos"
 
 //    /// Navigational links that include the self-link.
-    public varlinks: ResourceLinks<AppInfo>
+    public var links: ResourceLinks<AppInfo>
 }
 
 // MARK: AppInfo.Relationships
@@ -63,10 +63,10 @@ extension AppInfo.Relationships {
     public struct App: Codable {
 
         /// AppInfo.Relationships.App.Data
-        public vardata: AppInfo.Relationships.App.Data
+        public var data: AppInfo.Relationships.App.Data
 
          /// AppInfo.Relationships.App.Links
-        public varlinks: AppInfo.Relationships.App.Links?
+        public var links: AppInfo.Relationships.App.Links?
     }
 }
 
@@ -76,7 +76,7 @@ extension AppInfo.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: appStoreVersions
         public private(set) var type: String = "apps"
@@ -85,9 +85,9 @@ extension AppInfo.Relationships.App {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

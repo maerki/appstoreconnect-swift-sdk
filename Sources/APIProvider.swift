@@ -47,7 +47,7 @@ public final class APIProvider {
         case dateDecodingError(String)
         case requestExecutorError(Swift.Error)
 
-        public var debugDescription: String {
+        public var  debugDescription: String {
             switch self {
             case .requestGeneration:
                 return "Failed to generate request."

@@ -15,18 +15,18 @@ public struct BetaGroupBuildsLinkagesResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
     }
 
     /// The object types and IDs of the related resources.
-    public vardata: [BetaGroupBuildsLinkagesResponse.Data]
+    public var data: [BetaGroupBuildsLinkagesResponse.Data]
 
     /// Navigational links including the self-link and links to the related data.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

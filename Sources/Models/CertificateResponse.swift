@@ -14,8 +14,8 @@ import FoundationNetworking
 public struct CertificateResponse: Codable {
 
     /// The resource data.
-    public vardata: Certificate
+    public var data: Certificate
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 }

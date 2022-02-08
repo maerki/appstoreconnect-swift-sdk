@@ -4,11 +4,11 @@ import FoundationNetworking
 #endif
 
 public struct AppPreviewSetsResponse: Codable {
-    public vardata: [AppPreviewSet]
+    public var data: [AppPreviewSet]
 
-    public varincluded: [AppPreview]
+    public var included: [AppPreview]
 
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

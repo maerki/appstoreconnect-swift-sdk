@@ -11,11 +11,11 @@ import Foundation
 public struct BuildBundleFileSizesResponse: Codable {
 
     /// The resource data.
-    public vardata: [BuildBundleFileSize]
+    public var data: [BuildBundleFileSize]
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

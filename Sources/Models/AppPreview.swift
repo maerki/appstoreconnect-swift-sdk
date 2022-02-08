@@ -5,54 +5,54 @@ import FoundationNetworking
 
 public struct AppPreview: Codable {
     public struct Attributes: Codable {
-        public varassetDeliveryState: AppMediaAssetState?
-        public varfileName: String?
-        public varfileSize: Int?
-        public varmimeType: String?
-        public varpreviewFrameTimeCode: String?
-        public varpreviewImage: ImageAsset?
-        public varsourceFileChecksum: String?
-        public varuploadOperations: [UploadOperation]?
-        public varvideoUrl: String?
+        public var assetDeliveryState: AppMediaAssetState?
+        public var fileName: String?
+        public var fileSize: Int?
+        public var mimeType: String?
+        public var previewFrameTimeCode: String?
+        public var previewImage: ImageAsset?
+        public var sourceFileChecksum: String?
+        public var uploadOperations: [UploadOperation]?
+        public var videoUrl: String?
     }
 
     public struct Relationships: Codable {
-        public varappPreviewSet: AppPreview.Relationships.AppPreviewSet?
+        public var appPreviewSet: AppPreview.Relationships.AppPreviewSet?
     }
 
-    public varattributes: AppScreenshot.Attributes?
+    public var attributes: AppScreenshot.Attributes?
 
-    public varid: String
+    public var id: String
 
-    public varrelationships: AppScreenshot.Relationships?
+    public var relationships: AppScreenshot.Relationships?
 
     public private(set) var type: String = "appPreview"
 
-    public varlinks: ResourceLinks<AppScreenshotResponse>
+    public var links: ResourceLinks<AppScreenshotResponse>
 }
 
 public extension AppPreview.Relationships {
     struct AppPreviewSet: Codable {
-        public vardata: AppPreview.Relationships.AppPreviewSet.Data?
+        public var data: AppPreview.Relationships.AppPreviewSet.Data?
 
-        public varlinks: AppPreview.Relationships.AppPreviewSet.Links?
+        public var links: AppPreview.Relationships.AppPreviewSet.Links?
 
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 }
 
 public extension AppPreview.Relationships.AppPreviewSet {
     struct Data: Codable {
-        public varid: String
+        public var id: String
 
         public private(set) var type: String = "appPreviewsSets"
     }
 
     struct Links: Codable {
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

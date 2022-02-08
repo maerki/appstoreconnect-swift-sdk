@@ -15,20 +15,20 @@ public struct UserUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: UserUpdateRequest.Data.Attributes?
+        public var attributes: UserUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The types and IDs of the related data to update.
-        public varrelationships: UserUpdateRequest.Data.Relationships?
+        public var relationships: UserUpdateRequest.Data.Relationships?
 
         /// The resource type.Value: users
         public private(set) var type: String = "users"
     }
 
     /// The resource data.
-    public vardata: UserUpdateRequest.Data
+    public var data: UserUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -58,19 +58,19 @@ extension UserUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.
-        public varallAppsVisible: Bool?
+        public var allAppsVisible: Bool?
 
         /// A Boolean value that indicates the user's specified role allows access to the provisioning functionality on the Apple Developer website.
-        public varprovisioningAllowed: Bool?
+        public var provisioningAllowed: Bool?
 
         /// Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.
-        public varroles: [UserRole]?
+        public var roles: [UserRole]?
     }
 
     public struct Relationships: Codable {
 
         /// UserUpdateRequest.Data.Relationships.VisibleApps
-        public varvisibleApps: UserUpdateRequest.Data.Relationships.VisibleApps?
+        public var visibleApps: UserUpdateRequest.Data.Relationships.VisibleApps?
     }
 }
 
@@ -80,7 +80,7 @@ extension UserUpdateRequest.Data.Relationships {
     public struct VisibleApps: Codable {
 
         /// [UserUpdateRequest.Data.Relationships.VisibleApps.Data]
-        public vardata: [UserUpdateRequest.Data.Relationships.VisibleApps.Data]?
+        public var data: [UserUpdateRequest.Data.Relationships.VisibleApps.Data]?
     }
 }
 
@@ -90,7 +90,7 @@ extension UserUpdateRequest.Data.Relationships.VisibleApps {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"

@@ -13,14 +13,14 @@ import FoundationNetworking
 public struct UserInvitationsResponse: Codable {
 
     /// The resource data.
-    public vardata: [UserInvitation]
+    public var data: [UserInvitation]
 
     /// The requested relationship data.
-    public varincluded: [App]?
+    public var included: [App]?
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
     /// Paging information.
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

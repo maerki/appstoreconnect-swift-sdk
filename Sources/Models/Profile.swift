@@ -15,42 +15,42 @@ public struct Profile: Codable {
 
     /// Attributes that describe a resource.
     public struct Attributes: Codable {
-        public varname: String?
-        public varplatform: BundleIdPlatform?
-        public varprofileContent: String?
-        public varuuid: String?
-        public varcreatedDate: Date?
-        public varprofileState: ProfileState?
-        public varprofileType: ProfileType?
-        public varexpirationDate: Date?
+        public var name: String?
+        public var platform: BundleIdPlatform?
+        public var profileContent: String?
+        public var uuid: String?
+        public var createdDate: Date?
+        public var profileState: ProfileState?
+        public var profileType: ProfileType?
+        public var expirationDate: Date?
     }
 
     public struct Relationships: Codable {
 
         /// Profile.Relationships.Certificates
-        public varcertificates: Profile.Relationships.Certificates?
+        public var certificates: Profile.Relationships.Certificates?
 
         /// Profile.Relationships.Devices
-        public vardevices: Profile.Relationships.Devices?
+        public var devices: Profile.Relationships.Devices?
 
         /// Profile.Relationships.BundleId
-        public varbundleId: Profile.Relationships.BundleId?
+        public var bundleId: Profile.Relationships.BundleId?
     }
 
     /// The resource's attributes.
-    public varattributes: Profile.Attributes?
+    public var attributes: Profile.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public var`id`: String
+    public var `id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public varrelationships: Profile.Relationships?
+    public var relationships: Profile.Relationships?
 
     /// The resource type.Value: profiles
     public private(set) var type: String = "profiles"
 
     /// Navigational links that include the self-link.
-    public varlinks: ResourceLinks<ProfileResponse>
+    public var links: ResourceLinks<ProfileResponse>
 }
 
 // MARK: Profile.Relationships
@@ -59,34 +59,34 @@ extension Profile.Relationships {
     public struct Certificates: Codable {
 
         /// [Profile.Relationships.Certificates.Data]
-        public vardata: [Profile.Relationships.Certificates.Data]?
+        public var data: [Profile.Relationships.Certificates.Data]?
 
         /// Profile.Relationships.Certificates.Links
-        public varlinks: Profile.Relationships.Certificates.Links?
+        public var links: Profile.Relationships.Certificates.Links?
 
         /// PagingInformation
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 
     public struct Devices: Codable {
 
         /// [Profile.Relationships.Devices.Data]
-        public vardata: [Profile.Relationships.Devices.Data]?
+        public var data: [Profile.Relationships.Devices.Data]?
 
         /// Profile.Relationships.Devices.Links
-        public varlinks: Profile.Relationships.Devices.Links?
+        public var links: Profile.Relationships.Devices.Links?
 
         /// PagingInformation
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 
     public struct BundleId: Codable {
 
         /// Profile.Relationships.BundleId.Data
-        public vardata: Profile.Relationships.BundleId.Data?
+        public var data: Profile.Relationships.BundleId.Data?
 
         /// Profile.Relationships.BundleId.Links
-        public varlinks: Profile.Relationships.BundleId.Links?
+        public var links: Profile.Relationships.BundleId.Links?
     }
 }
 
@@ -96,7 +96,7 @@ extension Profile.Relationships.Certificates {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "certificates"
@@ -105,10 +105,10 @@ extension Profile.Relationships.Certificates {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }
 
@@ -118,7 +118,7 @@ extension Profile.Relationships.Devices {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "devices"
@@ -127,10 +127,10 @@ extension Profile.Relationships.Devices {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }
 
@@ -140,7 +140,7 @@ extension Profile.Relationships.BundleId {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: bundleIds
         public private(set) var type: String = "bundleIds"
@@ -149,9 +149,9 @@ extension Profile.Relationships.BundleId {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

@@ -13,12 +13,12 @@ import FoundationNetworking
 public struct BuildResponse: Codable {
 
     /// The resource data.
-    public vardata: Build
+    public var data: Build
 
     /// The requested relationship data.￼
     ///  Possible types: PrereleaseVersion, BetaTester, BetaBuildLocalization, AppEncryptionDeclaration, BetaAppReviewSubmission, App, BuildBetaDetail
-    public varincluded: [BuildRelationship]?
+    public var included: [BuildRelationship]?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

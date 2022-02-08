@@ -11,17 +11,17 @@ public struct BundleIdUpdateRequest: Encodable {
     public struct Data: Encodable {
 
         /// The resource's attributes.
-        public varattributes: BundleIdUpdateRequest.Data.Attributes?
+        public var attributes: BundleIdUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.
         public private(set) var type: String = "bundleIds"
     }
 
     /// The resource data.
-    public vardata: Data
+    public var data: Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -37,6 +37,6 @@ public struct BundleIdUpdateRequest: Encodable {
 extension BundleIdUpdateRequest.Data {
 
     public struct Attributes: Encodable {
-        public varname: String
+        public var name: String
     }
 }

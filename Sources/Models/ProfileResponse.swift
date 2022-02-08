@@ -14,12 +14,12 @@ import FoundationNetworking
 public struct ProfileResponse: Codable {
 
     /// The resource data.
-    public vardata: Profile
+    public var data: Profile
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 
     /// The requested relationship data.￼
     ///  Possible types: BundleId, Device, Certificate
-    public varincluded: [ProfileRelationship]?
+    public var included: [ProfileRelationship]?
 }

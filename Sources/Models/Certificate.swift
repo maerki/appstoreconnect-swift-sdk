@@ -15,24 +15,24 @@ public struct Certificate: Codable {
 
     /// Attributes that describe a certificate.
     public struct Attributes: Codable {
-        public varcertificateContent: String?
-        public vardisplayName: String?
-        public varexpirationDate: Date?
-        public varname: String?
-        public varplatform: BundleIdPlatform?
-        public varserialNumber: String?
-        public varcertificateType: CertificateType?
+        public var certificateContent: String?
+        public var displayName: String?
+        public var expirationDate: Date?
+        public var name: String?
+        public var platform: BundleIdPlatform?
+        public var serialNumber: String?
+        public var certificateType: CertificateType?
     }
 
     /// The resource's attributes.
-    public varattributes: Certificate.Attributes
+    public var attributes: Certificate.Attributes
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public var`id`: String
+    public var `id`: String
 
     /// The resource type.
     public private(set) var type: String = "certificates"
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 }

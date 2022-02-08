@@ -15,15 +15,15 @@ public struct BetaBuildLocalizationBuildLinkageResponse: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
     }
 
     /// The resource data.
-    public vardata: BetaBuildLocalizationBuildLinkageResponse.Data
+    public var data: BetaBuildLocalizationBuildLinkageResponse.Data
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

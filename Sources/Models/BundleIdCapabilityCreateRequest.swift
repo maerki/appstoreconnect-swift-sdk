@@ -16,17 +16,17 @@ public struct BundleIdCapabilityCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BundleIdCapabilityCreateRequest.Data.Attributes
+        public var attributes: BundleIdCapabilityCreateRequest.Data.Attributes
 
         /// The types and IDs of the related data to update.
-        public varrelationships: BundleIdCapabilityCreateRequest.Data.Relationships
+        public var relationships: BundleIdCapabilityCreateRequest.Data.Relationships
 
         /// The resource type.Value: bundleIdCapabilities
         public private(set) var type: String = "bundleIdCapabilities"
     }
 
     /// The resource data.
-    public vardata: BundleIdCapabilityCreateRequest.Data
+    public var data: BundleIdCapabilityCreateRequest.Data
 
     /// - Parameters:
     ///   - bundleId: The opaque resource ID that uniquely identifies the resource.
@@ -52,16 +52,16 @@ extension BundleIdCapabilityCreateRequest.Data {
     public struct Attributes: Codable {
 
         /// The type of the capabillity.
-        public varcapabilityType: CapabilityType?
+        public var capabilityType: CapabilityType?
 
         /// Specific settings for this capability.
-        public varsettings: [CapabilitySetting]?
+        public var settings: [CapabilitySetting]?
     }
 
     public struct Relationships: Codable {
 
         /// BundleIdCapabilityCreateRequest.Data.Relationships.BundleId (Required)
-        public varbundleId: BundleIdCapabilityCreateRequest.Data.Relationships.BundleId
+        public var bundleId: BundleIdCapabilityCreateRequest.Data.Relationships.BundleId
     }
 }
 
@@ -71,7 +71,7 @@ extension BundleIdCapabilityCreateRequest.Data.Relationships {
     public struct BundleId: Codable {
 
         /// BundleIdCapabilityCreateRequest.Data.Relationships.BundleId.Data (Required)
-        public vardata: BundleIdCapabilityCreateRequest.Data.Relationships.BundleId.Data
+        public var data: BundleIdCapabilityCreateRequest.Data.Relationships.BundleId.Data
     }
 }
 
@@ -81,7 +81,7 @@ extension BundleIdCapabilityCreateRequest.Data.Relationships.BundleId {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "bundleIds"

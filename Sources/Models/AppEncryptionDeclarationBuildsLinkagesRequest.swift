@@ -16,14 +16,14 @@ public struct AppEncryptionDeclarationBuildsLinkagesRequest: Codable {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
     }
 
     /// The object types and IDs of the related resources.
-    public vardata: [AppEncryptionDeclarationBuildsLinkagesRequest.Data]
+    public var data: [AppEncryptionDeclarationBuildsLinkagesRequest.Data]
 
     /// - Parameters:
     ///   - buildIds: Array of opaque resource ID that uniquely identifies the resources.

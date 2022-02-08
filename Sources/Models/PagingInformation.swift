@@ -16,13 +16,13 @@ public struct PagingInformation: Codable {
     public struct Paging: Codable {
 
         /// The total number of resources matching your request.
-        public vartotal: Int
+        public var total: Int
 
         /// The maximum number of resources to return per page, from 0 to 200.
-        public varlimit: Int
+        public var limit: Int
     }
 
     /// The paging information details.
-    public varpaging: PagingInformation.Paging
+    public var paging: PagingInformation.Paging
 
 }

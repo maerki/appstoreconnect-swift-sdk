@@ -15,14 +15,14 @@ public struct BetaTesterInvitationCreateRequest: Codable {
     public struct Data: Codable {
 
         /// The types and IDs of the related data to update.
-        public varrelationships: BetaTesterInvitationCreateRequest.Data.Relationships
+        public var relationships: BetaTesterInvitationCreateRequest.Data.Relationships
 
         /// The resource type.Value: betaTesterInvitations
         public private(set) var type: String = "betaTesterInvitations"
     }
 
     /// The resource data.
-    public vardata: BetaTesterInvitationCreateRequest.Data
+    public var data: BetaTesterInvitationCreateRequest.Data
 
     /// - Parameters:
     ///   - appId: The opaque resource ID that uniquely identifies the resource.
@@ -41,10 +41,10 @@ extension BetaTesterInvitationCreateRequest.Data {
     public struct Relationships: Codable {
 
         /// BetaTesterInvitationCreateRequest.Data.Relationships.App (Required)
-        public varapp: BetaTesterInvitationCreateRequest.Data.Relationships.App
+        public var app: BetaTesterInvitationCreateRequest.Data.Relationships.App
 
         /// BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester (Required)
-        public varbetaTester: BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester
+        public var betaTester: BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester
     }
 }
 
@@ -54,13 +54,13 @@ extension BetaTesterInvitationCreateRequest.Data.Relationships {
     public struct App: Codable {
 
         /// BetaTesterInvitationCreateRequest.Data.Relationships.App.Data (Required)
-        public vardata: BetaTesterInvitationCreateRequest.Data.Relationships.App.Data
+        public var data: BetaTesterInvitationCreateRequest.Data.Relationships.App.Data
     }
 
     public struct BetaTester: Codable {
 
         /// BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester.Data (Required)
-        public vardata: BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester.Data
+        public var data: BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester.Data
     }
 }
 
@@ -70,7 +70,7 @@ extension BetaTesterInvitationCreateRequest.Data.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -83,7 +83,7 @@ extension BetaTesterInvitationCreateRequest.Data.Relationships.BetaTester {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "betaTesters"

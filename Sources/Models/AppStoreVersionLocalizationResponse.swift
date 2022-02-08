@@ -12,12 +12,12 @@ import FoundationNetworking
 
 public struct AppStoreVersionLocalizationResponse: Codable {
     /// The resource data.
-    public vardata: AppStoreVersionLocalization
+    public var data: AppStoreVersionLocalization
 
     /// The requested relationship data.￼
     ///  Possible types: AgeRatingDeclaration, AppStoreVersionLocalization, Build, AppStoreVersionPhasedRelease, RoutingAppCoverage, AppStoreReviewDetail, AppStoreVersionSubmission, IdfaDeclaration
-    public varincluded: [AppStoreVersionRelationship]?
+    public var included: [AppStoreVersionRelationship]?
 
     /// Navigational links that include the self-link.
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 }

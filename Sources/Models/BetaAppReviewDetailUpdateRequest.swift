@@ -15,17 +15,17 @@ public struct BetaAppReviewDetailUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BetaAppReviewDetailUpdateRequest.Data.Attributes?
+        public var attributes: BetaAppReviewDetailUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaAppReviewDetails
         public private(set) var type: String = "betaAppReviewDetails"
     }
 
     /// The resource data.
-    public vardata: BetaAppReviewDetailUpdateRequest.Data
+    public var data: BetaAppReviewDetailUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -66,27 +66,27 @@ extension BetaAppReviewDetailUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// Email address of contact in case communication is needed with the beta app review.
-        public varcontactEmail: String?
+        public var contactEmail: String?
 
         /// First name of contact in case communication is needed with the beta app review.
-        public varcontactFirstName: String?
+        public var contactFirstName: String?
 
         /// Last name of contact in case communication is needed with the beta app review.
-        public varcontactLastName: String?
+        public var contactLastName: String?
 
         /// Phone number of contact in case communication is needed with the beta app review.
-        public varcontactPhone: String?
+        public var contactPhone: String?
 
         /// The user name to sign in to your app to review its features.
-        public vardemoAccountName: String?
+        public var demoAccountName: String?
 
         /// The password to sign in to your app to review its features.
-        public vardemoAccountPassword: String?
+        public var demoAccountPassword: String?
 
         /// A Boolean value that indicates if sign-in information is required to review all the features of your app. If users sign in using social media, provide information for an account for review. Credentials must be valid and active for duration of review.
-        public vardemoAccountRequired: Bool?
+        public var demoAccountRequired: Bool?
 
         /// Additional information about your app that can help during the review process. Do not include demo account details. Review notes have a maximum of 4,000 characters.
-        public varnotes: String?
+        public var notes: String?
     }
 }

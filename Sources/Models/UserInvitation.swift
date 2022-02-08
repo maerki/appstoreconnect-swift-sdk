@@ -16,47 +16,47 @@ public struct UserInvitation: Codable {
     public struct Attributes: Codable {
 
         /// The email address of a pending user invitation. The email address must be valid to activate the account. It can be any email address, not necessarily one associated with an Apple ID.
-        public varemail: String?
+        public var email: String?
 
         /// The first name of the user with the pending user invitation.
-        public varfirstName: String?
+        public var firstName: String?
 
         /// The last name of the user with the pending user invitation.
-        public varlastName: String?
+        public var lastName: String?
 
         /// Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.
-        public varroles: [UserRole]?
+        public var roles: [UserRole]?
 
         /// The expiration date of the pending invitation.
-        public varexpirationDate: Date?
+        public var expirationDate: Date?
 
         /// A Boolean value that indicates the user's specified role allows access to the provisioning functionality on the Apple Developer website.
-        public varprovisioningAllowed: Bool?
+        public var provisioningAllowed: Bool?
 
         /// A Boolean value that indicates whether a user has access to all apps available to the team.
-        public varallAppsVisible: Bool?
+        public var allAppsVisible: Bool?
     }
 
     public struct Relationships: Codable {
 
         /// UserInvitation.Relationships.VisibleApps
-        public varvisibleApps: UserInvitation.Relationships.VisibleApps?
+        public var visibleApps: UserInvitation.Relationships.VisibleApps?
     }
 
     /// The resource's attributes.
-    public varattributes: UserInvitation.Attributes?
+    public var attributes: UserInvitation.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public var`id`: String
+    public var `id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public varrelationships: UserInvitation.Relationships?
+    public var relationships: UserInvitation.Relationships?
 
     /// The resource type.Value: userInvitations
     public private(set) var type: String = "userInvitations"
 
     /// Navigational links that include the self-link.
-    public varlinks: ResourceLinks<UserInvitationResponse>
+    public var links: ResourceLinks<UserInvitationResponse>
 }
 
 // MARK: UserInvitation.Relationships
@@ -65,13 +65,13 @@ extension UserInvitation.Relationships {
     public struct VisibleApps: Codable {
 
         /// [UserInvitation.Relationships.VisibleApps.Data]
-        public vardata: [UserInvitation.Relationships.VisibleApps.Data]?
+        public var data: [UserInvitation.Relationships.VisibleApps.Data]?
 
         /// UserInvitation.Relationships.VisibleApps.Links
-        public varlinks: UserInvitation.Relationships.VisibleApps.Links?
+        public var links: UserInvitation.Relationships.VisibleApps.Links?
 
         /// PagingInformation
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 }
 
@@ -81,7 +81,7 @@ extension UserInvitation.Relationships.VisibleApps {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -90,9 +90,9 @@ extension UserInvitation.Relationships.VisibleApps {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

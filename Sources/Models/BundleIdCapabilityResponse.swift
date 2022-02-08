@@ -14,8 +14,8 @@ import FoundationNetworking
 public struct BundleIdCapabilityResponse: Codable {
 
     /// The resource data.
-    public vardata: BundleIdCapability?
+    public var data: BundleIdCapability?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

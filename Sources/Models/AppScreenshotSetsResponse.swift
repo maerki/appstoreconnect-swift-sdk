@@ -4,11 +4,11 @@ import FoundationNetworking
 #endif
 
 public struct AppScreenshotSetsResponse: Codable {
-    public vardata: [AppScreenshotSet]
+    public var data: [AppScreenshotSet]
 
-    public varincluded: [AppScreenshot]?
+    public var included: [AppScreenshot]?
 
-    public varlinks: PagedDocumentLinks
+    public var links: PagedDocumentLinks
 
-    public varmeta: PagingInformation?
+    public var meta: PagingInformation?
 }

@@ -16,56 +16,56 @@ public struct BetaGroup: Codable {
     public struct Attributes: Codable {
 
         /// A Boolean value that indicates whether the group is internal. Only existing users of App Store Connect may be added for internal beta testing.
-        public varisInternalGroup: Bool?
+        public var isInternalGroup: Bool?
 
         /// The name for the beta group.
-        public varname: String?
+        public var name: String?
 
         /// The URL of the public link provided to your app's beta testers.
-        public varpublicLink: String?
+        public var publicLink: String?
 
         /// A Boolean value that indicates whether a public link is enabled. Enabling a link allows you to invite anyone outside of your team to beta test your app. When you share this link, testers will be able to install the beta version of your app on their devices in TestFlight and share the link with others.
-        public varpublicLinkEnabled: Bool?
+        public var publicLinkEnabled: Bool?
 
         /// The ID as part of the URL of the public link.
-        public varpublicLinkId: String?
+        public var publicLinkId: String?
 
         /// The maximum number of testers that can join this beta group using the public link. Values must be between 1 and 10,000.
-        public varpublicLinkLimit: Int?
+        public var publicLinkLimit: Int?
 
         /// A Boolean value that limits the number of testers who can join the beta group using the public link.
-        public varpublicLinkLimitEnabled: Bool?
+        public var publicLinkLimitEnabled: Bool?
 
         /// The creation date of the beta group.
-        public varcreatedDate: Date?
+        public var createdDate: Date?
     }
 
     public struct Relationships: Codable {
 
         /// BetaGroup.Relationships.App
-        public varapp: BetaGroup.Relationships.App?
+        public var app: BetaGroup.Relationships.App?
 
         /// BetaGroup.Relationships.BetaTesters
-        public varbetaTesters: BetaGroup.Relationships.BetaTesters?
+        public var betaTesters: BetaGroup.Relationships.BetaTesters?
 
         /// BetaGroup.Relationships.Builds
-        public varbuilds: BetaGroup.Relationships.Builds?
+        public var builds: BetaGroup.Relationships.Builds?
     }
 
     /// The resource's attributes.
-    public varattributes: BetaGroup.Attributes?
+    public var attributes: BetaGroup.Attributes?
 
     /// The opaque resource ID that uniquely identifies the resource.
-    public var`id`: String
+    public var `id`: String
 
     /// Navigational links to related data and included resource types and IDs.
-    public varrelationships: BetaGroup.Relationships?
+    public var relationships: BetaGroup.Relationships?
 
     /// The resource type.Value: betaGroups
     public private(set) var type: String = "betaGroups"
 
     /// Navigational links that include the self-link.
-    public varlinks: ResourceLinks<BetaGroupResponse>
+    public var links: ResourceLinks<BetaGroupResponse>
 }
 
 // MARK: BetaGroup.Relationships
@@ -74,34 +74,34 @@ extension BetaGroup.Relationships {
     public struct App: Codable {
 
         /// BetaGroup.Relationships.App.Data
-        public vardata: BetaGroup.Relationships.App.Data?
+        public var data: BetaGroup.Relationships.App.Data?
 
         /// BetaGroup.Relationships.App.Links
-        public varlinks: BetaGroup.Relationships.App.Links?
+        public var links: BetaGroup.Relationships.App.Links?
     }
 
     public struct BetaTesters: Codable {
 
         /// [BetaGroup.Relationships.BetaTesters.Data]
-        public vardata: [BetaGroup.Relationships.BetaTesters.Data]?
+        public var data: [BetaGroup.Relationships.BetaTesters.Data]?
 
         /// BetaGroup.Relationships.BetaTesters.Links
-        public varlinks: BetaGroup.Relationships.BetaTesters.Links?
+        public var links: BetaGroup.Relationships.BetaTesters.Links?
 
         /// PagingInformation
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 
     public struct Builds: Codable {
 
         /// [BetaGroup.Relationships.Builds.Data]
-        public vardata: [BetaGroup.Relationships.Builds.Data]?
+        public var data: [BetaGroup.Relationships.Builds.Data]?
 
         /// BetaGroup.Relationships.Builds.Links
-        public varlinks: BetaGroup.Relationships.Builds.Links?
+        public var links: BetaGroup.Relationships.Builds.Links?
 
         /// PagingInformation
-        public varmeta: PagingInformation?
+        public var meta: PagingInformation?
     }
 }
 
@@ -111,7 +111,7 @@ extension BetaGroup.Relationships.App {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: apps
         public private(set) var type: String = "apps"
@@ -120,10 +120,10 @@ extension BetaGroup.Relationships.App {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }
 
@@ -133,7 +133,7 @@ extension BetaGroup.Relationships.BetaTesters {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaTesters
         public private(set) var type: String = "betaTesters"
@@ -142,10 +142,10 @@ extension BetaGroup.Relationships.BetaTesters {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }
 
@@ -155,7 +155,7 @@ extension BetaGroup.Relationships.Builds {
     public struct Data: Codable {
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: builds
         public private(set) var type: String = "builds"
@@ -164,9 +164,9 @@ extension BetaGroup.Relationships.Builds {
     public struct Links: Codable {
 
         /// uri-reference
-        public varrelated: URL?
+        public var related: URL?
 
         /// uri-reference
-        public var`self`: URL?
+        public var `self`: URL?
     }
 }

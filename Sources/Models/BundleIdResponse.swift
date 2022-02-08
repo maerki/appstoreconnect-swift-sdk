@@ -14,12 +14,12 @@ import FoundationNetworking
 public struct BundleIdResponse: Codable {
 
     /// The resource data.
-    public vardata: BundleId
+    public var data: BundleId
 
     /// Navigational links including the self-link and links to the related data.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 
     /// The requested relationship data.￼
     ///  Possible types: Profile, BundleIdCapability
-    public varincluded: [BundleIdRelationship]?
+    public var included: [BundleIdRelationship]?
 }

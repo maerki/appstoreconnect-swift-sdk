@@ -15,17 +15,17 @@ public struct BetaAppLocalizationUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: BetaAppLocalizationUpdateRequest.Data.Attributes?
+        public var attributes: BetaAppLocalizationUpdateRequest.Data.Attributes?
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: betaAppLocalizations
         public private(set) var type: String = "betaAppLocalizations"
     }
 
     /// The resource data.
-    public vardata: BetaAppLocalizationUpdateRequest.Data
+    public var data: BetaAppLocalizationUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -57,18 +57,18 @@ extension BetaAppLocalizationUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// A description of your app that highlights features and functionality.
-        public vardescription: String?
+        public var description: String?
 
         /// An email address to which beta testers can send feedback. Also appears as the reply-to address for TestFlight invitation emails.
-        public varfeedbackEmail: String?
+        public var feedbackEmail: String?
 
         /// A URL with information about your app. This URL is visible to testers in the TestFlight app
-        public varmarketingUrl: String?
+        public var marketingUrl: String?
 
         /// A URL that links to your company’s privacy policy. Privacy policies are recommended for all apps that collect user or device-related data or as otherwise required by law.
-        public varprivacyPolicyUrl: String?
+        public var privacyPolicyUrl: String?
 
         /// Your company’s privacy policy. Privacy policies are recommended for all apps that collect user or device-related data, or as otherwise required by law.
-        public vartvOsPrivacyPolicy: String?
+        public var tvOsPrivacyPolicy: String?
     }
 }

@@ -11,21 +11,21 @@ public struct CertificateCreateRequest: Encodable {
     public struct Data: Encodable {
 
         /// The resource's attributes.
-        public varattributes: CertificateCreateRequest.Data.Attributes?
+        public var attributes: CertificateCreateRequest.Data.Attributes?
 
         /// The resource type.
         public private(set) var type: String = "certificates"
     }
 
     /// The resource data.
-    public vardata: Data
+    public var data: Data
 }
 
 // MARK: CertificateCreateRequest.Data
 extension CertificateCreateRequest.Data {
 
     public struct Attributes: Encodable {
-        public varcertificateType: CertificateType
-        public varcsrContent: String
+        public var certificateType: CertificateType
+        public var csrContent: String
     }
 }

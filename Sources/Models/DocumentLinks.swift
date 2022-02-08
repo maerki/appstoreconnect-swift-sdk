@@ -13,5 +13,5 @@ import FoundationNetworking
 public struct DocumentLinks: Codable {
 
     /// The link that produced the current document.
-    public var`self`: URL
+    public var `self`: URL
 }

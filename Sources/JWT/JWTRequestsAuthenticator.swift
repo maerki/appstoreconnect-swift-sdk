@@ -9,60 +9,23 @@ import Foundation
 #if os(Linux)
 import FoundationNetworking
 #endif
-import JWTKit
-
-struct JWTToken {
-    var token: String
-    var created = Date()
-    let expireDuration: TimeInterval
-
-
-    var isExpired: Bool {
-        Date().timeIntervalSince(created) < expireDuration
-    }
-}
-
-final class JWTCreator {
-    let signers = JWTSigners()
-
-    let keyIdentifier: String
-    let issuerIdentifier: String
-    let expireDuration: TimeInterval
-
-    init(keyIdentifier: String, issuerIdentifier: String, expireDuration: TimeInterval) {
-        self.keyIdentifier = keyIdentifier
-        self.issuerIdentifier = issuerIdentifier
-        self.expireDuration = expireDuration
-    }
-
-    func signedToken(using privateKey: String) throws -> JWTToken {
-        let k = try ECDSAKey.private(pem: privateKey)
-        signers.use(.es256(key: k), kid: JWKIdentifier(string: keyIdentifier))
-
-        let jwt = JWT(keyIdentifier: keyIdentifier, issuerIdentifier: issuerIdentifier, expireDuration: expireDuration)
-        let payload = jwt.payload
-        let token = try signers.sign(payload, kid: JWKIdentifier(string: keyIdentifier))
-
-        return JWTToken(token: token, expireDuration: expireDuration)
-    }
-}
 
 /// An Authenticator for URL Requests which makes use of the RequestAdapter from Alamofire.
 final class JWTRequestsAuthenticator {
 
-    private var cachedToken: JWTToken?
+    private var cachedToken: JWT.Token?
     private let apiConfiguration: APIConfiguration
 
     /// The JWT Creator to use for creating the JWT token. Can be overriden for test use cases.
-    var jwtCreator: JWTCreator
+    var jwtCreator: JWTCreatable
 
     init(apiConfiguration: APIConfiguration) {
         self.apiConfiguration = apiConfiguration
-        self.jwtCreator = JWTCreator(keyIdentifier: apiConfiguration.privateKeyID, issuerIdentifier: apiConfiguration.issuerID, expireDuration: 60 * 10)
+        self.jwtCreator = JWT(keyIdentifier: apiConfiguration.privateKeyID, issuerIdentifier: apiConfiguration.issuerID, expireDuration: 60 * 20)
     }
 
     /// Generates a new JWT Token, but only if the in memory cached one is not expired.
-    private func createToken() throws -> JWTToken {
+    private func createToken() throws -> JWT.Token {
         if let cachedToken = cachedToken, !cachedToken.isExpired {
             return cachedToken
         }
@@ -75,7 +38,7 @@ final class JWTRequestsAuthenticator {
 
 extension JWTRequestsAuthenticator {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        let token = try createToken().token
+        let token = try createToken()
         var urlRequest = urlRequest
         urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         return urlRequest

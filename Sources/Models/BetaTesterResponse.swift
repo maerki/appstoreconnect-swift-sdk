@@ -13,12 +13,12 @@ import FoundationNetworking
 public struct BetaTesterResponse: Codable {
 
     /// The resource data.
-    public vardata: BetaTester
+    public var data: BetaTester
 
     /// The requested relationship data.￼
     ///  Possible types: App, BetaGroup, Build
-    public varincluded: [BetaTesterRelationship]?
+    public var included: [BetaTesterRelationship]?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

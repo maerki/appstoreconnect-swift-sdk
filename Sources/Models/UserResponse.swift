@@ -13,11 +13,11 @@ import FoundationNetworking
 public struct UserResponse: Codable {
 
     /// The resource data.
-    public vardata: User
+    public var data: User
 
     /// The requested relationship data.
-    public varincluded: [App]?
+    public var included: [App]?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

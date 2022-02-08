@@ -14,11 +14,11 @@ import FoundationNetworking
 public struct AppEncryptionDeclarationResponse: Codable {
 
     /// The resource data.
-    public vardata: AppEncryptionDeclaration
+    public var data: AppEncryptionDeclaration
 
     /// The requested relationship data.
-    public varincluded: [App]?
+    public var included: [App]?
 
     /// Navigational links that include the self-link.
-    public varlinks: DocumentLinks
+    public var links: DocumentLinks
 }

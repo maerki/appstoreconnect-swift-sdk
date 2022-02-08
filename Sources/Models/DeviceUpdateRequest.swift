@@ -16,17 +16,17 @@ public struct DeviceUpdateRequest: Codable {
     public struct Data: Codable {
 
         /// The resource's attributes.
-        public varattributes: DeviceUpdateRequest.Data.Attributes
+        public var attributes: DeviceUpdateRequest.Data.Attributes
 
         /// The opaque resource ID that uniquely identifies the resource.
-        public var`id`: String
+        public var `id`: String
 
         /// The resource type.Value: devices
         public private(set) var type: String = "devices"
     }
 
     /// The object types and IDs of the related resources.
-    public vardata: DeviceUpdateRequest.Data
+    public var data: DeviceUpdateRequest.Data
 
     /// - Parameters:
     ///   - id: The opaque resource ID that uniquely identifies the resource.
@@ -51,9 +51,9 @@ extension DeviceUpdateRequest.Data {
     public struct Attributes: Codable {
 
         /// The name of the device.
-        public varname: String?
+        public var name: String?
 
         /// The status of the device.
-        public varstatus: DeviceStatus?
+        public var status: DeviceStatus?
     }
 }

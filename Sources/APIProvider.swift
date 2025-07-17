@@ -6,7 +6,7 @@
 //
 
 import Foundation
-#if os(Linux)
+#if canImport(OpenCombine)
 import OpenCombine
 #else
 import Combine

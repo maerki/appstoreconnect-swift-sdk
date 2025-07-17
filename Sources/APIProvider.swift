@@ -6,10 +6,10 @@
 //
 
 import Foundation
-#if canImport(OpenCombine)
-import OpenCombine
-#else
+#if canImport(Combine)
 import Combine
+#else
+import OpenCombine
 #endif
 #if canImport(FoundationNetworking)
 import FoundationNetworking
